@@ -26,7 +26,28 @@
 }
 .mug {
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 400px;
 }
 .responsive-img {
-  border: 7px solid #800000;
+  border: 3px solid #D6D6CE;
+  margin-top: 50px;
+  width: 300px;
+}
+.cover-img {
+  background-image: url("http://i.imgur.com/EmRKjFo.jpg");
+  background-size: cover;
+  overflow: visible;
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px) {
+  .responsive-img {
+    max-height: 200px;
+    width: auto;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+  }
 }
