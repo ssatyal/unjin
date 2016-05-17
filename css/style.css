@@ -1,0 +1,32 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.maroon {
+  background-color: #800000;
+}
+.light-grey{
+  background-color: #D6D6CE;
+}
+.grey-text{
+  color: #767676;
+}
+.maroon-text {
+  color: #800000;
+}
+.mug {
+  text-align: center;
+}
+.responsive-img {
+  border: 7px solid #800000;
+}
