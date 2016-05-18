@@ -40,6 +40,9 @@
   background-size: cover;
   overflow: visible;
 }
+#index-banner{
+  padding-top: 0;
+}
 @media only screen
   and (max-width: 667px) {
   .cover-img{
