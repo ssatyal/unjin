@@ -43,6 +43,9 @@
   background-size: cover;
   overflow: visible;
 }
+.btn-latge:hover {
+  background-color: #800000;
+}
 #index-banner{
   padding-top: 0;
 }
