@@ -4541,6 +4541,9 @@ small {
   transition: box-shadow .25s;
   border-radius: 2px;
 }
+.row {
+  justify-content: space-around;
+}
 
 .card .card-title {
   font-size: 24px;

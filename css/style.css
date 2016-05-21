@@ -46,6 +46,16 @@
 .btn-latge:hover {
   background-color: #800000;
 }
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: #800000;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+  color: #767676;
+}
+.row .col {
+  padding: 0 0.75rem;
+}
 #index-banner{
   padding-top: 0;
 }
