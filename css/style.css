@@ -18,6 +18,9 @@
 .light-grey{
   background-color: #D6D6CE;
 }
+.light-grey-text {
+  color: #D6D6CE;
+}
 .grey-text{
   color: #767676;
 }
@@ -52,6 +55,13 @@
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
   color: #767676;
+}
+.contact a{
+  color: #D6D6CE;
+  transition-duration: 1s;
+}
+.contact:hover a {
+  color: #800000;
 }
 
 #index-banner{
