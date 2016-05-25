@@ -26,3 +26,8 @@ $(document).ready(function() {
 
 $("#nav-mobile li").click(function() {
   $('.button-collapse').sideNav('hide'); });
+
+  // $(".mobile-link").on("click", function(){
+  //   $(".side-nav").hide();
+  //   console.log("clicked");
+  // });
