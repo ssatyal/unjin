@@ -64,6 +64,11 @@
   color: #800000;
 }
 
+.extra {
+  border: 1px solid red;
+  border-radius: 10px;
+  min-height: 250px;
+}
 #index-banner{
   padding-top: 0;
 }
