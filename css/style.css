@@ -1,10 +1,4 @@
 /* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
 .icon-block {
   padding: 0 15px;
@@ -64,13 +58,21 @@
   color: #800000;
 }
 
-.extra {
-  border: 1px solid red;
-  border-radius: 10px;
-  min-height: 250px;
+a {
+  color: #D6D6CE;
+  transition: .5s;
+}
+.sanj-link:hover{
+  color: #66A5AD;
 }
 #index-banner{
   padding-top: 0;
+}
+li:nth-child(odd){
+  color: #464646;
+}
+li:nth-child(even){
+  color: #7F7E7E;
 }
 @media only screen
   and (max-width: 667px) {
