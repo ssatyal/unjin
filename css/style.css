@@ -74,6 +74,9 @@ li:nth-child(odd){
 li:nth-child(even){
   color: #7F7E7E;
 }
+.justify{
+  text-align: justify;
+}
 
 @media only screen
   and (max-width: 667px) {
