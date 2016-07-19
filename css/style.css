@@ -77,6 +77,14 @@ li:nth-child(even){
 .justify{
   text-align: justify;
 }
+#languages {
+  text-align: center;
+}
+#languages > li {
+  display: inline;
+  margin: 0 auto;
+  padding: 5px;
+}
 
 @media only screen
   and (max-width: 667px) {
