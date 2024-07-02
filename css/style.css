@@ -8,8 +8,8 @@
     font-size: inherit;
 }
 
-.maroon {
-    background-color: #800000;
+.rockablue {
+    background-color: #005595;
 }
 
 .light-grey {
@@ -28,8 +28,8 @@
     background-color: #767676;
 }
 
-.maroon-text {
-    color: #800000;
+.rockablue-text {
+    color: #005595;
 }
 
 .mug {
@@ -46,17 +46,17 @@
 }
 
 .cover-img {
-    background-image: url("http://i.imgur.com/EmRKjFo.jpg");
+    background-image: url("https://i.imgur.com/kWrzIcM.jpg");
     background-size: cover;
     overflow: visible;
 }
 
 .btn-latge:hover {
-    background-color: #800000;
+    background-color: #005595;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    color: #800000;
+    color: #005595;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
@@ -69,7 +69,7 @@
 }
 
 .contact:hover a {
-    color: #800000;
+    color: #005595;
 }
 
 a {
@@ -83,6 +83,22 @@ a {
 
 #index-banner {
     padding-top: 0;
+}
+
+#name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#orcid-logo {
+    height: 32px;
+    padding-left: 8px;
+    filter: drop-shadow(2px 3px 1px rgb(5, 5, 5));
+}
+
+#job-title {
+    padding: 0 32px;
 }
 
 li:nth-child(odd) {
@@ -109,6 +125,10 @@ li:nth-child(even) {
     display: inline;
     margin: 0 auto;
     padding: 5px;
+}
+
+#lab-name {
+    font-size: 28px;
 }
 
 @media only screen and (max-width: 667px) {
