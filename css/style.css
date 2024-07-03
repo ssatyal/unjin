@@ -101,6 +101,11 @@ a {
     padding: 0 32px;
 }
 
+#pubs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 li:nth-child(odd) {
     color: #464646;
 }
