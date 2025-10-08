@@ -151,7 +151,7 @@ li:nth-child(even) {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-device-width: 450px) {
     h1 {
         font-size: 30px;
         margin: 0;
