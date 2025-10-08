@@ -150,3 +150,37 @@ li:nth-child(even) {
         margin-left: auto;
     }
 }
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px;
+        #job-title.center {
+            margin: 0;
+        }
+    }
+    #lab-name {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;
+    }
+    #education {
+        #job-title {
+            margin: 8px 0 0 0;
+        }
+        #current-school {
+            margin: 0
+        }
+        #phd-school {
+            margin: 8px 0 0 0;
+        }
+    }
+}
