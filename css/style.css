@@ -163,8 +163,12 @@ a {
     gap: 28px;
     width: 92vw;
     max-width: 1128px;                 /* two 550px cards + gap: caps the row at two-up */
-    margin-left: calc(50% - 46vw);     /* center the wide row inside the narrow container */
-    margin-right: auto;
+    /* Full-bleed centering that stays centered even when max-width clamps the row:
+       left:50% puts the row's left edge at the page center, then translateX(-50%)
+       pulls it back by half its own (clamped) width. */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #pubs .col {
