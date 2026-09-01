@@ -98,12 +98,13 @@
                         <div class="pubcard-face pubcard-front">
                             <div class="card-image" tabindex="0" role="button" aria-expanded="false" aria-label="Show abstract for {{ pub.title | escape }}">
                                 {% if pub.image %}<img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />{% endif %}
+                                <span class="flip-cue" aria-hidden="true">abstract&nbsp;&#8644;</span>
                             </div>
                             <div class="card-content">
                                 <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
                                 <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
                                 <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
-                                {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
+                                {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords limit:4 %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
                             </div>
                             <div class="card-action">
                                 <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>

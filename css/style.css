@@ -266,6 +266,32 @@ a {
     outline-offset: -2px;
 }
 
+/* Subtle "flip for the abstract" cue: hidden until the card is hovered */
+#pubs .flip-cue {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 0.62rem;
+    letter-spacing: 0.3px;
+    color: #fff;
+    background: rgba(0, 85, 149, 0.85);
+    border-radius: 10px;
+    padding: 1px 9px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+#pubs .pubcard:hover .flip-cue {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    #pubs .flip-cue {
+        opacity: 1;    /* touch devices have no hover; keep the cue visible */
+    }
+}
+
 #pubs .pubcard-front .card-content {
     flex: 0 0 auto;            /* natural height; the figure takes the leftover space */
     overflow: hidden;
@@ -363,12 +389,11 @@ a {
 }
 
 
-li:nth-child(odd) {
+/* Uniform grey for the Achievements lists (was an alternating odd/even zebra that
+   read as unintentional). Footer .white-text lists are unaffected (Materialize
+   sets those with !important). */
+#extra li {
     color: #464646;
-}
-
-li:nth-child(even) {
-    color: #7F7E7E;
 }
 
 .justify {
