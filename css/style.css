@@ -158,6 +158,14 @@ a {
     justify-content: flex-start;
 }
 
+/* Let the two-up card row run ~15% wider than the text container on desktop */
+@media only screen and (min-width: 993px) {
+    #pubs {
+        width: 115%;
+        margin-left: -7.5%;
+    }
+}
+
 /* ── Flip publication cards ─────────────────────────────────────────────────
    Front = figure + title + authors + venue/DOI. Hovering (or focusing) the
    FIGURE flips the card on its vertical axis to reveal the abstract. Every card
@@ -184,6 +192,19 @@ a {
 
 #pubs .pubcard.is-flipped .pubcard-inner {
     transform: rotateY(180deg);
+}
+
+/* Focus ring on the static container, so it stays visible after the flip */
+#pubs .pubcard:focus-within {
+    outline: 2px solid #005595;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #pubs .pubcard-inner {
+        transition: none;
+    }
 }
 
 #pubs .pubcard-face {
@@ -227,19 +248,6 @@ a {
 #pubs .pubcard-front .card-image:focus-visible {
     outline: 2px solid #005595;
     outline-offset: -2px;
-}
-
-#pubs .flip-hint {
-    position: absolute;
-    right: 8px;
-    bottom: 6px;
-    font-size: 0.6rem;
-    letter-spacing: .3px;
-    color: #005595;
-    background: rgba(255, 255, 255, .8);
-    border-radius: 10px;
-    padding: 1px 8px;
-    pointer-events: none;
 }
 
 #pubs .pubcard-front .card-content {

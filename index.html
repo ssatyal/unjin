@@ -48,7 +48,7 @@
             </div>
             <div class="section" id="education">
                 <div id="name-container">
-                    <h1 class="header center rockablue-text"><a href="assets/cv.pdf" target="_blank" rel="noopener" class="name-link rockablue-text" title="View CV">UnJin Lee</a></h1>
+                    <h1 class="header center rockablue-text"><a href="assets/cv.pdf" target="_blank" rel="noopener" class="name-link rockablue-text" title="View CV" aria-label="UnJin Lee — view CV (PDF)">UnJin Lee</a></h1>
                 </div>
                 <div class="social-row">
                     <a class="social-link" href="https://orcid.org/0000-0003-2424-650X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
@@ -91,13 +91,12 @@
         <div class="section row" id="pubs">
 
             {% for pub in site.data.publications %}
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6">
                 <div class="pubcard">
                     <div class="pubcard-inner">
                         <div class="pubcard-face pubcard-front">
-                            <div class="card-image" tabindex="0" role="button" aria-label="Show abstract for {{ pub.title | escape }}">
+                            <div class="card-image" tabindex="0" role="button" aria-expanded="false" aria-label="Show abstract for {{ pub.title | escape }}">
                                 <img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
-                                <span class="flip-hint" aria-hidden="true">abstract &#8635;</span>
                             </div>
                             <div class="card-content">
                                 <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>

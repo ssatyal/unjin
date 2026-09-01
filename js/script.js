@@ -12,13 +12,18 @@ $(document).ready(function(){
     document.querySelectorAll('#pubs .pubcard').forEach(function(card){
         var fig = card.querySelector('.card-image');
         if (!fig) return;
-        fig.addEventListener('mouseenter', function(){ card.classList.add('is-flipped'); });
-        card.addEventListener('mouseleave', function(){ card.classList.remove('is-flipped'); });
-        fig.addEventListener('focus', function(){ card.classList.add('is-flipped'); });
-        fig.addEventListener('blur', function(){ card.classList.remove('is-flipped'); });
-        fig.addEventListener('click', function(){ card.classList.toggle('is-flipped'); });
+        function setFlip(on){
+            card.classList.toggle('is-flipped', on);
+            fig.setAttribute('aria-expanded', on ? 'true' : 'false');
+        }
+        function toggle(){ setFlip(!card.classList.contains('is-flipped')); }
+        fig.addEventListener('mouseenter', function(){ setFlip(true); });
+        card.addEventListener('mouseleave', function(){ setFlip(false); });
+        fig.addEventListener('focus', function(){ setFlip(true); });
+        fig.addEventListener('blur', function(){ setFlip(false); });
+        fig.addEventListener('click', toggle);
         fig.addEventListener('keydown', function(e){
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('is-flipped'); }
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
         });
     });
 });
