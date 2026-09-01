@@ -178,8 +178,16 @@ a {
 
 #pubs .pubcard {
     width: 100%;
-    height: 510px;
+    height: 560px;
     perspective: 1500px;
+}
+
+/* Neutralize Materialize's .row clearfix pseudo-elements, which otherwise become
+   stray flex items and can misplace the trailing lone card. */
+#pubs::before,
+#pubs::after {
+    content: none;
+    display: none;
 }
 
 #pubs .pubcard-inner {
@@ -228,7 +236,7 @@ a {
 
 /* The figure is the flip trigger */
 #pubs .pubcard-front .card-image {
-    flex: 0 0 180px;
+    flex: 0 0 225px;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -379,7 +387,7 @@ li:nth-child(even) {
 }
 
 #lab-name {
-    font-size: 23px;
+    font-size: 20px;
 }
 
 /* ── Compact (but not tiny) header block (name + affiliation) ──────────────── */
@@ -404,12 +412,16 @@ li:nth-child(even) {
 
 #phd-school {
     font-size: 1.2rem;
-    margin: 4px auto;
+    margin: 16px auto 4px;   /* slight gap between Rockefeller and PhD */
 }
 
 #education h5.grey-text {
     font-size: 1.05rem;
     margin: 2px auto;
+}
+
+#education h5.undergrad-line {
+    margin-top: 14px;        /* slight gap after the committee line */
 }
 
 .research-blurb {
