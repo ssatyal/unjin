@@ -6,13 +6,9 @@
 title: UnJin Lee
 description: Academic homepage of UnJin Lee, evolutionary geneticist.
 
-# Do not run Markdown/Liquid on vendored assets, and keep dev files out of the build.
+# Keep dev-only files out of the build. NOTE: `exclude` removes files from the
+# built SITE, so it must NOT list the vendored css/js the pages actually load.
 exclude:
   - readme.md
-  - test.md
-  - css/materialize.css
-  - css/materialize.min.css
-  - js/materialize.js
-  - js/materialize.min.js
 
 # No plugins are required; publications render from _data via a Liquid loop in index.html.
