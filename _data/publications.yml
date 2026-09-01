@@ -83,7 +83,7 @@
   year: 2026
   url: "https://www.biorxiv.org/content/10.64898/2026.08.24.746899v1"
   doi: "10.64898/2026.08.24.746899"
-  image: "assets/img/biorxiv-hp6.svg"
+  image: "assets/img/biorxiv-hp6.jpg"
   keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
   abstract: >-
@@ -105,7 +105,7 @@
   year: 2026
   url: "https://www.biorxiv.org/content/10.64898/2026.08.19.745823v1"
   doi: "10.64898/2026.08.19.745823"
-  image: "assets/img/biorxiv-neorf.svg"
+  image: "assets/img/biorxiv-neorf.jpg"
   keywords: ["transcriptional noise", "metalloproteins", "microsatellites", "de novo gene origination"]
   type: preprint
   abstract: >-
