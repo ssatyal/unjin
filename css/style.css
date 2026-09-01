@@ -51,9 +51,6 @@
     overflow: visible;
 }
 
-.btn-latge:hover {
-    background-color: #005595;
-}
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
     color: #005595;
@@ -154,7 +151,7 @@ a {
 /* Cards have a FIXED width, so switching between one- and two-up only changes how
    many fit per row — never the card size (this kills the "massive vs thin" jump).
    The row is full-bleed (wider than the 70% text container) so two wide cards fit,
-   and left-packed so the trailing lone card sits on the left. */
+   and centered on the page (including a trailing lone card). */
 #pubs {
     display: flex;
     flex-wrap: wrap;
@@ -291,7 +288,7 @@ a {
 
 #pubs .pubcard-front .pub-authors {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -302,14 +299,14 @@ a {
 }
 
 #pubs .card-title {
-    font-size: 1.05rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
     display: block;
 }
 
 /* ── Publication card details (authors, citation, tags, abstract) ───────────── */
 .pub-authors {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.4;
     color: #464646;
     margin: 8px 0 2px;
@@ -337,7 +334,7 @@ a {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #fff;
-    background-color: #35707a;
+    background-color: #2c5f68;
     border-radius: 3px;
     padding: 1px 6px;
     vertical-align: middle;
@@ -347,11 +344,6 @@ a {
     background-color: #595959;
 }
 
-/* The reveal panel holds the full abstract; let long abstracts scroll rather
-   than spill off the card. */
-.card-reveal {
-    overflow-y: auto;
-}
 
 .pub-authors-reveal {
     font-size: 0.92rem;

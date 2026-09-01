@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UnJin Lee</title>
     <meta name="description" content="UnJin Lee — evolutionary geneticist at the Rockefeller University studying how new genes are born. Publications, CV, and research." />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -23,7 +23,7 @@
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UnJin Lee</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#education">Education</a></li>
-                <li><a href="./assets/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="./assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
                 <li><a href="#pubs">Publications</a></li>
                 <li><a href="#extra">Achievements</a></li>
                 <li><a href="#aboutme">About Me</a></li>
@@ -31,7 +31,7 @@
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="#education" class="mobile-link">Education</a></li>
-                <li><a href="./assets/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="./assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
                 <li><a href="#pubs" class="mobile-link">Publications</a></li>
                 <li><a href="#extra" class="mobile-link">Achievements</a></li>
                 <li><a href="#aboutme" class="mobile-link">About Me</a></li>
@@ -67,7 +67,7 @@
 
                 <h4 class="center" id="job-title">National Science Foundation Postdoctoral Fellow in Biology</h4>
                 <div class="center">
-                    <a id="lab-name" class="underline black-text" href="https://zhaolab.rockefeller.edu/index.php/people/" target="_blank">Laboratory of Evolutionary Genetics and Genomics</a>
+                    <a id="lab-name" class="underline black-text" href="https://zhaolab.rockefeller.edu/index.php/people/" target="_blank" rel="noopener">Laboratory of Evolutionary Genetics and Genomics</a>
                 </div>
                 <h4 class="center" id="current-school">Rockefeller University</h4>
                 <h4 class="center grey-text" id="phd-school">PhD, MS University of Chicago, 2021</h4>
@@ -97,7 +97,7 @@
                     <div class="pubcard-inner">
                         <div class="pubcard-face pubcard-front">
                             <div class="card-image" tabindex="0" role="button" aria-expanded="false" aria-label="Show abstract for {{ pub.title | escape }}">
-                                <img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
+                                {% if pub.image %}<img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />{% endif %}
                             </div>
                             <div class="card-content">
                                 <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
@@ -159,7 +159,7 @@
                     <h6 class="rockablue-text center">Outreach</h6>
                     <ul>
                         <li class="center">RockEDU SSRP Mentor, Summer 2023</li>
-                        <li class="center"><a class="rockablue-text underline" target="_blank" href="https://www.genspace.org/">Genspace</a> FIT Scholar Program Mentor, Spring 2023</li>
+                        <li class="center"><a class="rockablue-text underline" target="_blank" rel="noopener" href="https://www.genspace.org/">Genspace</a> FIT Scholar Program Mentor, Spring 2023</li>
                         <li class="center">E.E. Just Portrait Commission, 2017&ndash;2019</li>
                         <li class="center">Co-Host, Groks Science Radio Hour, WHPK 88.5FM, 2016&ndash;2018</li>
                         <li class="center">Genetics Science Connections at the Museum of Science and Industry, 2015&ndash;2016</li>
@@ -264,20 +264,20 @@
                     <div class="col l6 s12">
                         <h5 class="white-text center">Contact</h5>
                         <ul class="center">
-                            <i class="contact small light-grey-text material-icons"><a href="mailto:linuxlife@gmail.com" target="blank">email</a></i>
+                            <i class="contact small light-grey-text material-icons"><a href="mailto:linuxlife@gmail.com">email</a></i>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container center light-grey-text">
-                    created by <a class="sanj-link" href="http://ssatyal.github.io" target="_blank">Sanjaya Satyal</a>
+                    created by <a class="sanj-link" href="http://ssatyal.github.io" target="_blank" rel="noopener">Sanjaya Satyal</a>
                 </div>
             </div>
         </footer>
     </div>
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
     <script src="js/script.js"></script>
