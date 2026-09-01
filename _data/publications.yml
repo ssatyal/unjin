@@ -209,6 +209,7 @@
   url: "https://doi.org/10.1007/s11427-019-9483-6"
   doi: "10.1007/s11427-019-9483-6"
   image: "assets/img/scls-topological.png"
+  pdf: "assets/pdf/scls-topological.pdf"
   project: "new genes"
   alt: "Figure from the analysis of coexpression-network evolution driven by new-gene integration"
   keywords: ["gene coexpression networks", "network evolution", "new gene integration", "systems biology"]
@@ -247,6 +248,7 @@
   url: "https://doi.org/10.1103/PhysRevE.93.062127"
   doi: "10.1103/PhysRevE.93.062127"
   image: "assets/img/pre-geodesic.png"
+  pdf: "assets/pdf/pre-geodesic.pdf"
   project: "plasticity"
   alt: "Figure from the solvable nonequilibrium model of geometric structure and geodesics"
   keywords: ["nonequilibrium statistical mechanics", "information geometry", "stochastic processes"]

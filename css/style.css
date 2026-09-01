@@ -344,14 +344,15 @@ a {
    button, vertically centered against the link block. */
 #pubs .project-pill {
     flex: 0 0 auto;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
     line-height: 1.2;
     color: #fff;
     background-color: #005595;
     border-radius: 12px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     white-space: nowrap;
     text-align: center;
 }
