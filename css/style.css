@@ -302,6 +302,33 @@ a {
     flex: 0 0 auto;
     padding: 12px 20px 16px;
     border-top: 1px solid rgba(160, 160, 160, .2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#pubs .card-action-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+/* Research-theme pill: fills the empty bottom-right, ~25% smaller than the venue
+   button, vertically centered against the link block. */
+#pubs .project-pill {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #005595;
+    border-radius: 12px;
+    padding: 4px 12px;
+    white-space: nowrap;
+    text-align: center;
 }
 
 /* Clamp front text so every card stays the same height (full text is on the back) */

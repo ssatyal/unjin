@@ -107,8 +107,11 @@
                                 {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords limit:4 %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
                             </div>
                             <div class="card-action">
-                                <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
-                                {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
+                                <div class="card-action-links">
+                                    <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
+                                    {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
+                                </div>
+                                {% if pub.project %}<span class="project-pill" title="Research theme">{{ pub.project }}</span>{% endif %}
                             </div>
                         </div>
                         <div class="pubcard-face pubcard-back">

@@ -21,12 +21,22 @@ $(document).ready(function(){
             if (back) back.setAttribute('aria-hidden', on ? 'false' : 'true');
         }
         function toggle(){ setFlip(!card.classList.contains('is-flipped')); }
-        fig.addEventListener('mouseenter', function(){ setFlip(true); });
-        card.addEventListener('mouseleave', function(){ setFlip(false); });
+
+        // Mouse: flip only while the pointer is over the FIGURE zone (the top of the
+        // card); moving down to the title/links area flips back so the venue/DOI links
+        // are reachable without leaving the card. Driven off the non-rotating card, so
+        // it can't oscillate.
+        if (!isTouch) {
+            card.addEventListener('mousemove', function(e){
+                var rect = card.getBoundingClientRect();
+                setFlip((e.clientY - rect.top) <= fig.offsetHeight);
+            });
+            card.addEventListener('mouseleave', function(){ setFlip(false); });
+        }
+        // Keyboard
         fig.addEventListener('focus', function(){ setFlip(true); });
         fig.addEventListener('blur', function(){ setFlip(false); });
-        // Only bind tap-to-toggle on touch devices; on a mouse, hover handles it
-        // (a click would otherwise immediately un-flip a card you just hovered).
+        // Touch: tap the figure to toggle
         if (isTouch) fig.addEventListener('click', toggle);
         fig.addEventListener('keydown', function(e){
             if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }

@@ -32,6 +32,7 @@
   url: "https://www.biorxiv.org/content/10.64898/2026.08.24.746899v1"
   doi: "10.64898/2026.08.24.746899"
   image: "assets/img/biorxiv-hp6.jpg"
+  project: "chelation"
   alt: "HP6/Umbrea figure: Drosophila phylogeny of the HP1b/HP6 duplication, HP1a versus HP6 domain architecture with predicted structures, and a molecular-dynamics snapshot of HP6 chains dispersed through an HP1a condensate"
   keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
@@ -50,6 +51,7 @@
   url: "https://www.biorxiv.org/content/10.64898/2026.08.19.745823v1"
   doi: "10.64898/2026.08.19.745823"
   image: "assets/img/biorxiv-neorf.jpg"
+  project: "chelation"
   alt: "De novo ORF figure: how (CA)n microsatellites translate into bis-histidine (H-x-H) zinc-coordination motifs, the ZMEG His32/His34/His36 site, and the distribution of H-x-H motif counts across de novo ORFs"
   keywords: ["transcriptional noise", "metalloproteins", "microsatellites", "de novo gene origination"]
   type: preprint
@@ -68,6 +70,7 @@
   url: "https://doi.org/10.1016/j.tig.2026.01.013"
   doi: "10.1016/j.tig.2026.01.013"
   image: "assets/img/tig-ml.jpg"
+  project: "ML/AI"
   alt: "Overview panels of machine-learning applications across evolutionary genetics: protein structure change, fitness landscapes, regulatory evolution, phylogenetic inference, demographic history, detecting selection, epistasis, genotype-to-phenotype mapping, and variant prediction"
   keywords: ["machine learning", "deep learning", "molecular evolution", "evolutionary genetics", "genotype-phenotype"]
   type: journal
@@ -85,6 +88,7 @@
   url: "https://doi.org/10.1093/sumbio/qvag033"
   doi: "10.1093/sumbio/qvag033"
   image: "assets/img/knf.png"
+  project: "public outreach"
   alt: "Figure from the Korean Natural Farming study of indigenous-microorganism cultivation and its effect on microbial diversity"
   keywords: ["soil amendment", "metagenomic sequencing", "microbial dynamics"]
   type: journal
@@ -103,6 +107,7 @@
   url: "https://doi.org/10.1073/pnas.2425618122"
   doi: "10.1073/pnas.2425618122"
   image: "assets/img/pnas-bursting.png"
+  project: "cultivator"
   alt: "Figure from the comparative single-cell study of transcriptional bursting in Drosophila spermatogenesis"
   keywords: ["single-cell transcriptomics", "genome organization", "statistical methods", "transcriptional bursting", "de novo origination"]
   type: journal
@@ -121,6 +126,7 @@
   url: "https://doi.org/10.1126/sciadv.adn6625"
   doi: "10.1126/sciadv.adn6625"
   image: "assets/img/sciadv-3dgenome.png"
+  project: "enhancer capture"
   alt: "Figure from the study of enhancer capture and the 3D genome in asymmetric gene duplication"
   keywords: ["Hi-C", "RNAi", "genome organization", "gene regulation", "gene duplication", "evolutionary theory"]
   type: journal
@@ -139,6 +145,7 @@
   url: "https://doi.org/10.1093/gbe/evae103"
   doi: "10.1093/gbe/evae103"
   image: "assets/img/gbe-cultivator.png"
+  project: "cultivator"
   alt: "Schematic of the cultivator model of de novo gene origination: selection on a cultivator gene, novel regulatory elements and putative de novo transcription, and paths to de novo gene birth through cis- and trans-regulation by a de novo lncRNA"
   keywords: ["evolvability", "non-coding RNA", "de novo origination", "evolutionary theory"]
   type: journal
@@ -157,6 +164,7 @@
   url: "https://doi.org/10.1016/j.biosystems.2022.104791"
   doi: "10.1016/j.biosystems.2022.104791"
   image: "assets/img/biosystems-plasticity.jpg"
+  project: "plasticity"
   alt: "Figure from the stochastic model of the evolution of phenotypic plasticity"
   keywords: ["phenotypic plasticity", "stochastic differential equations", "evolutionary theory"]
   type: journal
@@ -175,6 +183,7 @@
   url: "https://doi.org/10.1371/journal.pgen.1009654"
   doi: "10.1371/journal.pgen.1009654"
   image: "assets/img/plosgen-newgenes.png"
+  project: "new genes"
   alt: "Figure from the genomic analysis of new-gene essentiality in Drosophila development"
   keywords: ["new genes", "gene essentiality", "Drosophila development", "RNAi knockdown", "functional evolution"]
   type: journal
@@ -191,6 +200,7 @@
   url: "https://doi.org/10.1007/s11427-019-9483-6"
   doi: "10.1007/s11427-019-9483-6"
   image: "assets/img/scls-topological.png"
+  project: "new genes"
   alt: "Figure from the analysis of coexpression-network evolution driven by new-gene integration"
   keywords: ["gene coexpression networks", "network evolution", "new gene integration", "systems biology"]
   type: journal
@@ -209,6 +219,7 @@
   url: "https://doi.org/10.7554/eLife.23539"
   doi: "10.7554/eLife.23539"
   image: "assets/img/elife-cyano.png"
+  project: "circadian rhythm"
   alt: "Figure from the study of the cyanobacterial circadian clock tracking midday across day lengths"
   keywords: ["circadian clock", "cyanobacteria", "entrainment"]
   type: journal
@@ -226,6 +237,7 @@
   url: "https://doi.org/10.1103/PhysRevE.93.062127"
   doi: "10.1103/PhysRevE.93.062127"
   image: "assets/img/pre-geodesic.png"
+  project: "plasticity"
   alt: "Figure from the solvable nonequilibrium model of geometric structure and geodesics"
   keywords: ["nonequilibrium statistical mechanics", "information geometry", "stochastic processes"]
   type: journal
@@ -242,6 +254,7 @@
   year: 2016
   url: "https://patents.google.com/patent/US20160078167A1/en"
   image: "assets/img/patent-breast.png"
+  project: "ML/AI"
   alt: "Figure from the prognostic and predictive breast-cancer gene-signature patent"
   keywords: ["breast cancer prognosis", "gene expression signature", "prognostic biomarkers"]
   type: patent
@@ -258,6 +271,7 @@
   url: "https://doi.org/10.1371/journal.pone.0132397"
   doi: "10.1371/journal.pone.0132397"
   image: "assets/img/plosone-noise.png"
+  project: "plasticity"
   alt: "Figure from the model of noise-driven phenotypic heterogeneity in clonal populations"
   keywords: ["phenotypic plasticity", "stochastic differential equations", "evolution of treatment resistance"]
   type: journal
@@ -275,6 +289,7 @@
   url: "https://doi.org/10.1371/journal.pone.0082125"
   doi: "10.1371/journal.pone.0082125"
   image: "assets/img/plosone-tnbc.png"
+  project: "ML/AI"
   alt: "Figure from the triple-negative breast cancer prognostic gene-signature study"
   keywords: ["machine learning", "triple-negative breast cancer", "patient prognosis", "survival analysis"]
   type: journal
