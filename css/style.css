@@ -477,6 +477,15 @@ li:nth-child(even) {
     text-wrap: pretty;
 }
 
+/* Presentations: put the (type), year on its own smaller second line,
+   inheriting the row's alternating grey. */
+.pres-meta {
+    display: block;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
 /* Spelled-out DOI on its own line under the venue button */
 .pub-doi {
     display: block;
