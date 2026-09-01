@@ -182,8 +182,7 @@ a {
     transform-style: preserve-3d;
 }
 
-#pubs .pubcard:has(.card-image:hover) .pubcard-inner,
-#pubs .pubcard:has(.card-image:focus) .pubcard-inner {
+#pubs .pubcard.is-flipped .pubcard-inner {
     transform: rotateY(180deg);
 }
 
