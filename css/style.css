@@ -385,7 +385,7 @@ a {
 
 /* ── Publication card details (authors, citation, tags, abstract) ───────────── */
 .pub-authors {
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     line-height: 1.4;
     color: #464646;
     margin: 8px 0 2px;
