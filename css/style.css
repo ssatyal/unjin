@@ -106,6 +106,89 @@ a {
     flex-wrap: wrap;
 }
 
+/* ── Publication card details (authors, citation, tags, abstract) ───────────── */
+.pub-authors {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: #464646;
+    margin: 8px 0 2px;
+}
+
+.pub-authors strong {
+    color: #005595;
+}
+
+.pub-citation {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: 0 0 4px;
+}
+
+.pub-type {
+    display: inline-block;
+    font-style: normal;
+    font-size: 0.62rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #66A5AD;
+    border-radius: 3px;
+    padding: 1px 6px;
+    vertical-align: middle;
+}
+
+.pub-type-patent {
+    background-color: #767676;
+}
+
+.pub-doi {
+    color: #005595 !important;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    margin-left: 12px;
+}
+
+/* The reveal panel holds the full abstract; let long abstracts scroll rather
+   than spill off the card. */
+.card-reveal {
+    overflow-y: auto;
+}
+
+.pub-authors-reveal {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: #767676;
+    margin: 6px 0 2px;
+}
+
+.pub-authors-reveal strong {
+    color: #005595;
+}
+
+.pub-citation-reveal {
+    font-size: 0.78rem;
+    font-style: italic;
+    margin: 0 0 12px;
+}
+
+.pub-highlights-title {
+    font-weight: 600;
+    margin: 14px 0 4px;
+}
+
+.pub-highlights {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc outside;
+}
+
+.pub-highlights > li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: #464646;
+}
+
 li:nth-child(odd) {
     color: #464646;
 }

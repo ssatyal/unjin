@@ -1,3 +1,7 @@
+---
+# Front matter (these two dashed lines) tells GitHub Pages / Jekyll to build this
+# page, which lets it loop over _data/publications.yml. Do not remove them.
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,247 +65,41 @@
 
     <div class="container">
         <h3 class="center rockablue-text">Publications</h3>
-        <!--   Publication Section   -->
+        <!--   Publication Section
+               NOTE: The cards below are generated automatically from _data/publications.yml.
+               To add or edit a paper, edit THAT file — you do not need to touch this loop. -->
         <div class="section row" id="pubs">
 
+            {% for pub in site.data.publications %}
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/Hp24YQO.png" />
+                        <img class="activator" src="{{ pub.image | relative_url }}" alt="Figure from “{{ pub.title }}”" />
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity<i class="material-icons right">more_vert</i></span>
+                        <span class="card-title activator grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">more_vert</i></span>
+                        <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
+                        <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
                     </div>
                     <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://www.biorxiv.org/content/10.1101/2025.09.26.678907v1">bioRxiv</a></p>
+                        <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
+                        {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity<i class="material-icons right">close</i></span>
-                        <p>Korean Natural Farming (KNF) practices claim to cultivate and transfer “indigenous micro-organisms” (IMOs) to donor soils as a method of probiotic soil enhancement, yet lack peer-reviewed scientific validation. We investigated
-                            whether IMO cultivation can propagate unique microbiomes and maintain microbial diversity through successive IMO stages for restoration of flood contaminated soils.</p>
+                        <span class="card-title grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">close</i></span>
+                        <p class="pub-authors-reveal">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
+                        <p class="pub-citation-reveal grey-text">{{ pub.citation }}</p>
+                        <p class="justify">{{ pub.abstract }}</p>
+                        {% if pub.highlights %}
+                        <p class="pub-highlights-title rockablue-text">Highlights</p>
+                        <ul class="pub-highlights browser-default">
+                            {% for h in pub.highlights %}<li>{{ h }}</li>{% endfor %}
+                        </ul>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/3ibAkVE.png" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Comparative Single Cell Analysis of Transcriptional Bursting Reveals the Role of Genome Organization in de novo Transcript Origination<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://www.pnas.org/doi/10.1073/pnas.2425618122">PNAS</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Comparative Single Cell Analysis of Transcriptional Bursting Reveals the Role of Genome Organization in de novo Transcript Origination<i class="material-icons right">close</i></span>
-                        <p>Spermatogenesis is a key developmental process underlying the origination of newly evolved genes. However, rapid cell type-specific transcriptomic divergence of the Drosophila germline has posed a significant technical barrier
-                            for comparative single-cell RNA-sequencing (scRNA-Seq) studies. By quantifying a surprisingly strong correlation between species-and cell type-specific divergence in three closely related Drosophila species, we apply a simple
-                            statistical procedure to identify a core set of 198 genes that are highly predictive of cell type identity while remaining robust to species-specific differences that span over 25-30 million years of evolution. </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/7qHWrKR.png" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">The 3-Dimensional Genome Drives the Evolution of Asymmetric Gene Duplicates via Enhancer Capture-Divergence<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://www.science.org/doi/10.1126/sciadv.adn6625">Science Advances</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">The 3-Dimensional Genome Drives the Evolution of Asymmetric Gene Duplicates via Enhancer Capture-Divergence<i class="material-icons right">close</i></span>
-                        <p>Previous evolutionary models of duplicate gene evolution have overlooked the pivotal role of genome architecture. Here, we show that proximity-based regulatory recruitment of distally duplicated genes (enhancer capture) is an efficient
-                            mechanism for modulating tissue-specific production of pre-existing proteins.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/ZIqRQNb.png" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">A Synergistic, Cultivator Model of De Novo Gene Origination <i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://academic.oup.com/gbe/article/16/6/evae103/7674236">Genome Biol. Evol.</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">A Synergistic, Cultivator Model of De Novo Gene Origination<i class="material-icons right">close</i></span>
-                        <p>The origin and fixation of evolutionarily young genes is a fundamental question in evolutionary biology. However, understanding the origins of newly evolved genes arising de novo from noncoding genomic sequences is challenging.
-                            This is partly due to the low likelihood that several neutral or nearly neutral mutations fix prior to the appearance of an important novel molecular function. This issue is particularly exacerbated in large effective population
-                            sizes where the effect of drift is small. To address this problem, we propose a regulation-focused, cultivator model for de novo gene evolution.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://ars.els-cdn.com/content/image/1-s2.0-S0303264722001721-gr4.jpg" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Evolution and maintenance of phenotypic plasticity<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0303264722001721">BioSystems</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Evolution and maintenance of phenotypic plasticity<i class="material-icons right">close</i></span>
-                        <p>We introduce a novel framework for exploring the evolutionary consequences of phenotypic plasticity (adaptive and non-adaptive) integrating both genic and epigenetic effects on phenotype via stochastic differential equations and
-                            in-silico selection.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/dAtUrme.png" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Topological evolution of coexpression networks by new gene integration maintains the hierarchical and modular structures in human ancestors <i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://www.researchgate.net/publication/332048832_Topological_evolution_of_coexpression_networks_by_new_gene_integration_maintains_the_hierarchical_and_modular_structures_in_human_ancestors">Sci China Life Sci</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Topological evolution of coexpression networks by new gene integration maintains the hierarchical and modular structures in human ancestors<i class="material-icons right">close</i></span>
-                        <p>We analyze the global structure and evolution of human gene coexpression networks driven by new gene integration. When the Pearson correlation coefficient is greater than or equal to 0.5, we find that the coexpression network consists
-                            of 334 small components and one "giant" connected subnet comprising of 6317 interacting genes. This network shows the properties of power-law degree distribution and small-world. The average clustering coefficient of younger
-                            genes is larger than that of the elderly genes (0.6685 vs. 0.5762). Particularly, we find that the younger genes with a larger degree also show a property of hierarchical architecture. The younger genes play an important role
-                            in the overall pivotability of the network and this network contains few redundant duplicate genes. Moreover, we find that gene duplication and orphan genes are two dominant evolutionary forces in shaping this network. Both
-                            the duplicate genes and orphan genes develop new links through a "rich-gets-richer" mechanism. With the gradual integration of new genes into the ancestral network, most of the topological structure features of the network
-                            would gradually increase. However, the exponent of degree distribution and modularity coefficient of the whole network do not change significantly, which implies that the evolution of coexpression networks maintains the hierarchical
-                            and modular structures in human ancestors. </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://journals.plos.org/plosgenetics/article/figure/image?size=large&id=10.1371/journal.pgen.1009654.g001" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Genomic analyses of new genes and their phenotypic effects reveal rapid evolution of essential functions in Drosophila development<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009654">Plos Genetics</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Genomic analyses of new genes and their phenotypic effects reveal rapid evolution of essential functions in Drosophila development<i class="material-icons right">close</i></span>
-                        <p>It is a conventionally held dogma that the genetic basis underlying development is conserved in a long evolutionary time scale. Ample experiments based on mutational, biochemical, functional, and complementary knockdown/knockout
-                            approaches have revealed the unexpectedly important role of recently evolved new genes in the development of Drosophila. The recent progress in the genome-wide experimental testing of gene effects and improvements in the computational
-                            identification of new genes (
-                            < 40 million years ago, Mya) open the door to investigate the evolution of gene essentiality with a phylogenetically high resolution</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/E9vKJOc.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"> Prognostic and predictive breast cancer signature <i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://patents.google.com/patent/US20160078167A1/en">USPTO</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"> Prognostic and predictive breast cancer signature <i class="material-icons right">close</i></span>
-                        <p>Embodiments of the invention are directed to methods of determining the prognosis of a breast cancer patient by evaluating a specified set of genes. Specifically, methods may comprise calculating a prognosis score based on a particular
-                            algorithm. Also disclosed are compositions, kits and methods for treating cancer in a subject in need thereof are disclosed involving one or more upstream activators and/or downstream effectors of TET1.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/MLn2Cie.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">The Cyanobacterial Circadian Clock Follows Midday in Vivo and in Vitro<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="https://elifesciences.org/articles/23539">eLIFE</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">The Cyanobacterial Circadian Clock Follows Midday in Vivo and in Vitro<i class="material-icons right">close</i></span>
-                        <p>Here we report experimental platforms for driving the cyanobacterial circadian clock both in vivo and in vitro. We find that the phase of the circadian rhythm follows a simple scaling law in light-dark cycles, tracking midday across
-                            conditions with variable day length. The core biochemical oscillator comprised of the Kai proteins behaves similarly when driven by metabolic pulses in vitro, indicating that such dynamics are intrinsic to these proteins. We
-                            develop a general mathematical framework based on instantaneous transformation of the clock cycle by external cues, and it successfully predicts clock behavior under many cycling environments.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://i.imgur.com/DN9Miub.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Geometric Structure and Geodesic in a Solvable Model of Nonequilibrium Process<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a href="http://journals.aps.org/pre/abstract/10.1103/PhysRevE.93.062127" class="btn waves-effect waves-light dark-grey" target="_blank">Phys Rev E</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Geometric Structure and Geodesic in a Solvable Model of Nonequilibrium Process<i class="material-icons right">close</i></span>
-                        <p>We investigate the geometric structure of a nonequilibrium process and its geodesic solutions. By employing an exactly solvable model of a driven dissipative system (generalized nonautonomous Ornstein-Uhlenbeck process), we compute
-                            the time-dependent probability density functions (PDFs) and investigate the evolution of this system in a statistical metric space where the distance between two points (the so-called information length) quantifies the change
-                            in information along a trajectory of the PDFs. </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://i.imgur.com/fg4c6dB.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Noise-Driven Phenotypic Heterogeneity with Finite Correlation Time in Clonal Populations<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0132397" class="btn waves-effect waves-light dark-grey" target="_blank">plos one</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Noise-Driven Phenotypic Heterogeneity with Finite Correlation Time in Clonal Populations<i class="material-icons right">close</i></span>
-                        <p>There has been increasing awareness in the wider biological community of the role of clonal phenotypic heterogeneity in playing key roles in phenomena such as cellular bet-hedging and decision making, as in the case of the phage-λ
-                            lysis/lysogeny and B. Subtilis competence/vegetative pathways. Here, we report on the effect of stochasticity in growth rate, cellular memory/intermittency, and its relation to phenotypic heterogeneity.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://i.imgur.com/wdRCWcA.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">A Prognostic Gene Signature for Metastasis-Free Survival of Triple Negative Breast Cancer Patients<i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-action">
-                        <p><a class="btn waves-effect waves-light dark-grey" target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082125">PLOS ONE</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">A Prognostic Gene Signature for Metastasis-Free Survival of Triple Negative Breast Cancer Patients<i class="material-icons right">close</i></span>
-                        <p>The application of gene expression array technology to breast cancer has emphasized the heterogeneity of this disease and also provided new tools to classify breast cancers into subtypes based on gene expression patterns. Ideally
-                            each subtype would reflect distinct molecular characteristics corresponding to discrete cancer phenotypes. This information could be used to gain prognostic insight and, eventually, to predict response to therapy.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
 

@@ -1,0 +1,18 @@
+# GitHub Pages / Jekyll configuration for unjinlee.com
+#
+# This file mostly tells the Jekyll build what to ignore. The site itself is
+# plain HTML + a data file (_data/publications.yml); there is no theme.
+
+title: UnJin Lee
+description: Academic homepage of UnJin Lee, evolutionary geneticist.
+
+# Do not run Markdown/Liquid on vendored assets, and keep dev files out of the build.
+exclude:
+  - readme.md
+  - test.md
+  - css/materialize.css
+  - css/materialize.min.css
+  - js/materialize.js
+  - js/materialize.min.js
+
+# No plugins are required; publications render from _data via a Liquid loop in index.html.
