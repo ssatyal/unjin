@@ -4,77 +4,25 @@
 # This is the ONLY file you edit to add / change / reorder publications.
 # The page (index.html) loops over this list and builds a card for each entry.
 #
-# To ADD a paper: copy one block below, paste it at the TOP (newest first),
-# and fill in the fields. Only `title`, `authors`, `venue`, `url` are required.
+# To ADD a paper: copy one block below, paste it where you want it to appear
+# (top = first card), and fill in the fields. Order here = order on the page.
+# Only `title`, `authors`, `venue`, `url` are required.
 #
 # Fields:
 #   title      — full paper title
 #   authors    — full author list, comma-separated. Write your own name exactly
-#                as "UnJin Lee" and it will be auto-bolded on the page.
+#                as "UnJin Lee" and it will be auto-bolded. Append † (corresponding)
+#                or * (equal contribution) right after a name; a legend explains them.
 #   venue      — short label shown on the link button (e.g. "PNAS", "bioRxiv")
 #   citation   — formatted line shown under the title (journal, vol, pages, year)
-#   year       — publication year (used for nothing but your own reference)
+#   year       — publication year (for your own reference)
 #   url        — link the button points to (DOI link preferred)
-#   doi        — optional; if present, a "DOI" link is shown
+#   doi        — optional; if present, a "DOI: <doi>" link is shown
 #   image      — path to the figure, e.g. assets/img/knf.png
-#   type       — journal | preprint | patent  (shown as a small tag)
-#   abstract   — full abstract (use ">-" block style as below)
-#   highlights — optional list of bullet points (used for review articles)
+#   keywords   — list of short topic tags shown as pills
+#   type       — journal | preprint | patent  (preprint/patent shown as a small tag)
+#   abstract   — short 2–3 sentence summary (shown on hover / click)
 # ─────────────────────────────────────────────────────────────────────────────
-
-- title: "Machine learning for evolutionary genetics and molecular evolution"
-  authors: "Nicolas Svetec, UnJin Lee, Li Zhao"
-  venue: "Trends in Genetics"
-  citation: "Trends in Genetics 42(5):423–433 (2026)"
-  year: 2026
-  url: "https://doi.org/10.1016/j.tig.2026.01.013"
-  doi: "10.1016/j.tig.2026.01.013"
-  image: "assets/img/tig-ml.jpg"
-  type: journal
-  abstract: >-
-    Over the past decade, the rapid expansion of large-scale data and advances in
-    computational power have allowed machine learning (ML), especially deep learning,
-    to reshape many areas of biological research. Evolutionary genetics and molecular
-    evolution are also poised for a similar transformation. In this review, we discuss
-    key advances and ongoing challenges in applying ML to the study of genetics and
-    evolution, and we highlight the potential of artificial intelligence to connect
-    genotype, phenotype, and evolutionary history.
-  highlights:
-    - "Recent advances in machine learning (ML) especially deep learning have enabled breakthroughs in biology and are poised to play an important role in evolutionary biology."
-    - "ML models are increasingly capable of connecting genetic variation to molecular function, integrating structural, regulatory, and phenotypic data at multiple scales."
-    - "ML models can now be used directly on raw SNPs, haplotypes, or allele frequency spectra, reducing reliance on summary statistics and enabling the discovery of previously unrecognized evolutionary patterns."
-    - "Emerging approaches move beyond correlation, using causal inference to generate mechanistic insights into evolutionary processes."
-    - "Integrating multiomics data through ML is revealing hidden layers of complexity, such as epistasis, regulatory evolution, and phenotypic plasticity, that shape adaptation and diversification."
-
-- title: "Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity"
-  authors: "Candace Thompson, Shawn Mozeika, Elizabeth Paredes, UnJin Lee†"
-  venue: "Sustainable Microbiology"
-  citation: "Sustainable Microbiology 3(3):qvag033 (2026)"
-  year: 2026
-  url: "https://doi.org/10.1093/sumbio/qvag033"
-  doi: "10.1093/sumbio/qvag033"
-  image: "assets/img/knf.png"
-  keywords: ["soil amendment", "metagenomic sequencing", "microbial dynamics"]
-  type: journal
-  abstract: >-
-    Korean Natural Farming (KNF) practices claim to cultivate and transfer 'indigenous
-    microorganisms (IMOs)' to donor soils as a method of probiotic soil enhancement. We
-    investigated whether IMO cultivation can propagate unique microbiomes and maintain
-    microbial diversity through successive IMO stages for restoration of flood contaminated
-    soils. Employing a balanced study design using soil samples from salt marsh, deciduous
-    forest, and urban greenspace (plus sterilized controls), samples underwent the first two
-    IMO cultivation steps followed by 16S rRNA and ITS metagenomic sequencing. Notably, IMO
-    cultivation was dominated by limited bacterial taxa (Enterobacterales, Pseudomonadales,
-    Bacillales) and fungal taxa (Rhizopodaceae, particularly R. oryzae). While bacterial
-    diversity was maintained or increased during two IMO stages, fungal diversity consistently
-    decreased. Principal Coordinates Analysis also revealed distinct clustering by inoculum
-    source (i.e. human-altered, human-transported vs. natural vs. sterile) that persisted
-    throughout cultivation. Our evidence suggests that the IMO process enriches for specific
-    taxa likely adapted to cultivated conditions and fails to maintain fungal diversity,
-    contrasting greatly with KNF's proposed benefit of propagating locale-specific,
-    fungal-dominated indigenous microbiomes. However, our results demonstrate that early IMO
-    cultures may capture and sustain bacterial diversity in soil, opening the door for future
-    studies of KNF efficacy and sustainability.
 
 - title: "HP6/Umbrea, a rapidly evolving Drosophila HP1-family paralog, is a candidate HP1a-recruited plasticizer of heterochromatin"
   authors: "UnJin Lee†, Li Zhao†"
@@ -84,19 +32,15 @@
   url: "https://www.biorxiv.org/content/10.64898/2026.08.24.746899v1"
   doi: "10.64898/2026.08.24.746899"
   image: "assets/img/biorxiv-hp6.jpg"
+  alt: "HP6/Umbrea figure: Drosophila phylogeny of the HP1b/HP6 duplication, HP1a versus HP6 domain architecture with predicted structures, and a molecular-dynamics snapshot of HP6 chains dispersed through an HP1a condensate"
   keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
   abstract: >-
-    HP6/Umbrea, a rapidly evolving Drosophila HP1-family paralog, functions as an
-    HP1a-recruited plasticizer of heterochromatin. The protein lacks independent
-    chromatin-binding capacity but binds HP1a directly. Molecular dynamics simulations
-    reveal that when incorporated into HP1a condensates, HP6/Umbrea lowers dense-phase
-    density without altering phase-separation thresholds. These findings suggest a spacer
-    function that may increase transcriptional machinery permeability, potentially
-    modulating heterochromatic silencing through a position effect-variegation mechanism.
-    Comparative sequence analysis indicates the C-terminal tail represents a recently
-    evolved, purifying-selection-constrained feature consistent with this condensate
-    plasticizer function.
+    HP6/Umbrea is a fast-evolving Drosophila HP1 paralog that binds HP1a but cannot bind
+    chromatin on its own. Molecular dynamics simulations show that, inside HP1a condensates,
+    it lowers dense-phase density without shifting the phase-separation threshold — acting as
+    a "plasticizer" that may loosen heterochromatin and modulate silencing. Sequence analysis
+    points to a recently evolved, selectively constrained C-terminal tail underlying this role.
 
 - title: "Naturally arising de novo open reading frames as potential zinc chelators in Drosophila melanogaster"
   authors: "UnJin Lee†"
@@ -106,30 +50,51 @@
   url: "https://www.biorxiv.org/content/10.64898/2026.08.19.745823v1"
   doi: "10.64898/2026.08.19.745823"
   image: "assets/img/biorxiv-neorf.jpg"
+  alt: "De novo ORF figure: how (CA)n microsatellites translate into bis-histidine (H-x-H) zinc-coordination motifs, the ZMEG His32/His34/His36 site, and the distribution of H-x-H motif counts across de novo ORFs"
   keywords: ["transcriptional noise", "metalloproteins", "microsatellites", "de novo gene origination"]
   type: preprint
   abstract: >-
-    A central open problem in the study of de novo gene origination is that the molecular
-    mechanisms and functions driving the emergence of such evolutionarily young, de novo
-    protein-coding genes remain poorly understood. Metal chelation, a simple, directly
-    selectable activity that both requires no specific interaction partners and is also
-    compatible with intrinsic disorder, is one possible function. This possibility was tested
-    using sequence signatures in 7,849 transcriptionally supported, still-segregating
-    Drosophila melanogaster de novo open reading frames. Interestingly, these new open reading
-    frames (neORFs) are enriched for bis-histidine motifs at the metal-coordination-competent
-    spacings H-x-H and H-x-x-x-H and show no enrichment at the incompatible even spacings
-    relative to repeat-masked intergenic ORFs. Notably, these neORFs were also found to lack
-    the C-x-x-C grammar of canonical metal-binding proteins. I report that this H-x-H
-    bis-histidine signal is generated by translation of (CA) microsatellites into His-Thr-His
-    in Drosophila melanogaster, as evidenced by a CAC-codon bias within H-x-H motifs and a
-    fourfold threonine enrichment at the central position. I propose that recurrent
-    microsatellite expansion supplies Drosophila with a distributed, independently originated
-    class of candidate metal-binding de novo peptides. I then trace one neORF (ZMEG) from
-    conserved ancestral non-coding sequence to a transcribed, melanogaster-lineage open reading
-    frame whose (CA)9-derived His run presents a candidate His32-His36 bis-histidine site. I
-    propose that such de novo proteins may constitute a class of molecules united not by common
-    descent but by their shared origin in evolvable repeat sequence, highlighting the importance
-    of emergence bias in molecular evolution.
+    Can brand-new (de novo) genes gain function without evolving complex binding partners? We
+    show that thousands of segregating Drosophila de novo ORFs are enriched for bis-histidine
+    (H-x-H) zinc-coordinating motifs, generated when (CA) microsatellites are translated into
+    His-Thr-His repeats. Tracing one such ORF (ZMEG) from ancestral non-coding sequence, we
+    argue that repeat expansion supplies a distributed class of candidate metal-binding
+    peptides — highlighting emergence bias in molecular evolution.
+
+- title: "Machine learning for evolutionary genetics and molecular evolution"
+  authors: "Nicolas Svetec, UnJin Lee, Li Zhao"
+  venue: "Trends in Genetics"
+  citation: "Trends in Genetics 42(5):423–433 (2026)"
+  year: 2026
+  url: "https://doi.org/10.1016/j.tig.2026.01.013"
+  doi: "10.1016/j.tig.2026.01.013"
+  image: "assets/img/tig-ml.jpg"
+  alt: "Overview panels of machine-learning applications across evolutionary genetics: protein structure change, fitness landscapes, regulatory evolution, phylogenetic inference, demographic history, detecting selection, epistasis, genotype-to-phenotype mapping, and variant prediction"
+  keywords: ["machine learning", "deep learning", "molecular evolution", "evolutionary genetics", "genotype-phenotype"]
+  type: journal
+  abstract: >-
+    Machine learning, and deep learning in particular, is beginning to reshape evolutionary
+    genetics and molecular evolution. This review surveys where ML now connects genotype,
+    phenotype, and evolutionary history — from working directly on raw genetic variation to
+    causal-inference and multiomic approaches — and the challenges that remain.
+
+- title: "Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity"
+  authors: "Candace Thompson, Shawn Mozeika, Elizabeth Paredes, UnJin Lee†"
+  venue: "Sustainable Microbiology"
+  citation: "Sustainable Microbiology 3(3):qvag033 (2026)"
+  year: 2026
+  url: "https://doi.org/10.1093/sumbio/qvag033"
+  doi: "10.1093/sumbio/qvag033"
+  image: "assets/img/knf.png"
+  alt: "Figure from the Korean Natural Farming study of indigenous-microorganism cultivation and its effect on microbial diversity"
+  keywords: ["soil amendment", "metagenomic sequencing", "microbial dynamics"]
+  type: journal
+  abstract: >-
+    Korean Natural Farming claims to cultivate and transfer beneficial "indigenous
+    microorganisms" to soils, but the practice lacks validation. Using 16S and ITS sequencing
+    across successive cultivation stages, we find the process is dominated by a few bacterial
+    and fungal taxa and consistently reduces fungal diversity — contrary to its claimed
+    benefit — though early cultures can capture and sustain bacterial diversity.
 
 - title: "Comparative single-cell analysis of transcriptional bursting reveals the role of genome organization in de novo transcript origination"
   authors: "UnJin Lee, Cong Li, Christopher B. Langer, Nicolas Svetec, Li Zhao"
@@ -139,29 +104,15 @@
   url: "https://doi.org/10.1073/pnas.2425618122"
   doi: "10.1073/pnas.2425618122"
   image: "assets/img/pnas-bursting.png"
+  alt: "Figure from the comparative single-cell study of transcriptional bursting in Drosophila spermatogenesis"
   keywords: ["single-cell transcriptomics", "genome organization", "statistical methods", "transcriptional bursting", "de novo origination"]
   type: journal
   abstract: >-
-    Spermatogenesis is a key developmental process underlying the origination of newly evolved
-    genes. However, rapid cell type-specific transcriptomic divergence of the Drosophila germline
-    has posed a significant technical barrier for comparative single-cell RNA-sequencing studies.
-    By quantifying a surprisingly strong correlation between species- and cell type-specific
-    divergence in three closely related Drosophila species, we apply a statistical procedure to
-    identify a core set of 198 genes that are highly predictive of cell type identity while
-    remaining robust to species-specific differences that span over 25 to 30 My of evolution. We
-    then utilize cell type classifications based on the 198-gene set to show how transcriptional
-    divergence in cell type increases throughout spermatogenic developmental time. After validating
-    these cross-species cell type classifications using RNA fluorescence in situ hybridization and
-    imaging, we then investigate the influence of genome organization on the molecular evolution of
-    spermatogenesis vis-a-vis transcriptional bursting. We first show altering transcriptional burst
-    size contributes to premeiotic transcription and altering bursting frequency contributes to
-    postmeiotic expression. We then report global differences in autosomal vs. X chromosomal
-    transcription may arise in a developmental stage preceding full testis organogenesis by showing
-    evolutionarily conserved decreases in X-linked transcription bursting kinetics in all examined
-    somatic and germline cell types. Finally, we provide evidence supporting the cultivator model of
-    de novo gene origination by demonstrating how the appearance of newly evolved testis-specific
-    transcripts potentially provides short-range regulation of neighboring genes' transcriptional
-    bursting properties during key stages of spermatogenesis.
+    Comparing single-cell transcriptomes across three Drosophila species, we identify a core
+    198-gene set that robustly labels spermatogenic cell types across 25–30 My of divergence.
+    Using it, we show how transcriptional bursting evolves through spermatogenesis — including
+    conserved reductions in X-linked bursting — and provide evidence for the cultivator model,
+    in which newly evolved testis transcripts locally tune neighboring genes' bursting.
 
 - title: "The three-dimensional genome drives the evolution of asymmetric gene duplicates via enhancer capture-divergence"
   authors: "UnJin Lee†*, Deanna Arsala*, Shengqian Xia*, Cong Li, Mujahid Ali, Nicolas Svetec, Christopher B. Langer, Débora R. Sobreira, Ittai Eres, Dylan Sosa, Jianhai Chen, Li Zhang, Patrick Reilly, Alexander Guzzetta, J.J. Emerson, Peter Andolfatto, Qi Zhou, Li Zhao, Manyuan Long†"
@@ -171,22 +122,15 @@
   url: "https://doi.org/10.1126/sciadv.adn6625"
   doi: "10.1126/sciadv.adn6625"
   image: "assets/img/sciadv-3dgenome.png"
+  alt: "Figure from the study of enhancer capture and the 3D genome in asymmetric gene duplication"
   keywords: ["Hi-C", "RNAi", "genome organization", "gene regulation", "gene duplication", "evolutionary theory"]
   type: journal
   abstract: >-
-    Previous evolutionary models of duplicate gene evolution have overlooked the pivotal role of
-    genome architecture. Here, we show that proximity-based regulatory recruitment by distally
-    duplicated genes is an efficient mechanism for modulating tissue-specific production of
-    preexisting proteins. By leveraging genomic asymmetries, we performed a coexpression analysis on
-    Drosophila melanogaster tissue data to show the generality of enhancer capture-divergence (ECD)
-    as a significant evolutionary driver of asymmetric, distally duplicated genes. We use the recently
-    evolved gene HP6/Umbrea as an example of the ECD process. By assaying genome-wide chromosomal
-    conformations in multiple Drosophila species, we show that HP6/Umbrea was inserted near a
-    preexisting, long-distance three-dimensional genomic interaction. We then use this data to identify
-    a newly found enhancer (FLEE1), buried within the coding region of the highly conserved, essential
-    gene MFS18, that likely neofunctionalized HP6/Umbrea. Last, we demonstrate ancestral transcriptional
-    coregulation of HP6/Umbrea's future insertion site, illustrating how enhancer capture provides a
-    highly evolvable, one-step solution to Ohno's dilemma.
+    Duplicate-gene models have largely ignored genome architecture. We show that distally
+    duplicated genes can be regulated by co-opting pre-existing long-range 3D contacts
+    ("enhancer capture"), using the young gene HP6/Umbrea as a case study: it landed near an
+    existing chromatin interaction and captured a hidden enhancer (FLEE1) inside the essential
+    gene MFS18. Enhancer capture offers a one-step, highly evolvable solution to Ohno's dilemma.
 
 - title: "A Synergistic, Cultivator Model of De Novo Gene Origination"
   authors: "UnJin Lee, Shawn M. Mozeika, Li Zhao"
@@ -196,19 +140,15 @@
   url: "https://doi.org/10.1093/gbe/evae103"
   doi: "10.1093/gbe/evae103"
   image: "assets/img/gbe-cultivator.png"
+  alt: "Schematic of cis-regulatory element syntax — ancestral, tandem-upstream, tandem-downstream, convergent, divergent, and distal promoter configurations — underlying the cultivator model of de novo gene origination"
   keywords: ["evolvability", "non-coding RNA", "de novo origination", "evolutionary theory"]
   type: journal
   abstract: >-
-    The origin and fixation of evolutionarily young genes is a fundamental question in evolutionary
-    biology. However, understanding the origins of newly evolved genes arising de novo from noncoding
-    genomic sequences is challenging. This is partly due to the low likelihood that several neutral or
-    nearly neutral mutations fix prior to the appearance of an important novel molecular function. This
-    issue is particularly exacerbated in large effective population sizes where the effect of drift is
-    small. To address this problem, we propose a regulation-focused, cultivator model for de novo gene
-    evolution. This cultivator-focused model posits that each step in a novel variant's evolutionary
-    trajectory is driven by well-defined, selectively advantageous functions for the cultivator genes,
-    rather than solely by the de novo genes, emphasizing the critical role of genome organization in the
-    evolution of new genes.
+    How do genes arising de novo from non-coding DNA fix and gain function, especially in large
+    populations where drift is weak? We propose a regulation-focused "cultivator" model in which
+    each step in a de novo gene's trajectory is driven by selectable benefits to neighboring
+    cultivator genes rather than the new gene itself, placing genome organization at the center
+    of new-gene evolution.
 
 - title: "Evolution and maintenance of phenotypic plasticity"
   authors: "UnJin Lee†, Emily N. Mortola, Eun-jin Kim†, Manyuan Long"
@@ -218,25 +158,15 @@
   url: "https://doi.org/10.1016/j.biosystems.2022.104791"
   doi: "10.1016/j.biosystems.2022.104791"
   image: "assets/img/biosystems-plasticity.jpg"
+  alt: "Figure from the stochastic model of the evolution of phenotypic plasticity"
   keywords: ["phenotypic plasticity", "stochastic differential equations", "evolutionary theory"]
   type: journal
   abstract: >-
-    We introduce a novel framework for exploring the evolutionary consequences of phenotypic plasticity
-    (adaptive and non-adaptive) integrating both genic and epigenetic effects on phenotype via stochastic
-    differential equations and in-silico selection. In accordance with the most significant results derived
-    from prior models, we demonstrate how plasticity is differentially favored when subjected to small vs
-    large environmental shifts, how plasticity is transiently favorable while accommodating a new
-    environment, and how plasticity decreases during epochs where the environment remains stable
-    (canalization). In contrast to these models, however, by allowing the same phenotypic value to be
-    produced via two different paths, i.e. deterministic, genic, vs stochastic, epigenetic mechanisms, we
-    demonstrate when genic contributions alone cannot produce an optimal phenotype, plastic, epigenetic
-    contributions will instead fully accommodate new environments, allowing for both adaptive and
-    non-adaptive plasticity to evolve. Furthermore, we show that while rates of phenotypic accommodation are
-    relatively constant under a wide range of selective conditions, selection will favor the most efficient
-    route to adaptation: deterministic, genic response, or stochastic, plastic response. As a result,
-    plasticity may evolve or canalization may occur within a given epoch depending on the relative mutation
-    rate of genic and epigenetic contributions to phenotype, highlighting the importance of genetic conflict
-    on the evolution of plasticity.
+    We introduce a stochastic framework combining genetic and epigenetic contributions to
+    phenotype to ask when plasticity evolves. Plasticity is favored transiently while adapting
+    to new environments and erodes (canalizes) in stable ones, with selection choosing the more
+    efficient route — genic or plastic — depending on relative mutation rates. The results
+    highlight genetic conflict as a force shaping the evolution of plasticity.
 
 - title: "Genomic analyses of new genes and their phenotypic effects reveal rapid evolution of essential functions in Drosophila development"
   authors: "Shengqian Xia, Nicholas W. VanKuren, Chunyan Chen, Li Zhang, Claus Kemkemer, Yi Shao, Hangxing Jia, UnJin Lee, Alexander S. Advani, Andrea Gschwend, Maria D. Vibranovski, Sidi Chen, Yong E. Zhang, Manyuan Long"
@@ -246,26 +176,15 @@
   url: "https://doi.org/10.1371/journal.pgen.1009654"
   doi: "10.1371/journal.pgen.1009654"
   image: "assets/img/plosgen-newgenes.png"
+  alt: "Figure from the genomic analysis of new-gene essentiality in Drosophila development"
+  keywords: ["new genes", "gene essentiality", "Drosophila development", "RNAi knockdown", "functional evolution"]
   type: journal
   abstract: >-
-    It is a conventionally held dogma that the genetic basis underlying development is conserved in a long
-    evolutionary time scale. Ample experiments based on mutational, biochemical, functional, and
-    complementary knockdown/knockout approaches have revealed the unexpectedly important role of recently
-    evolved new genes in the development of Drosophila. The recent progress in the genome-wide experimental
-    testing of gene effects and improvements in the computational identification of new genes (&lt; 40 million
-    years ago, Mya) open the door to investigate the evolution of gene essentiality with a phylogenetically
-    high resolution. These advancements also raised interesting issues in techniques and concepts related to
-    phenotypic effect analyses of genes, particularly of those that recently originated. Here we reported our
-    analyses of these issues, including reproducibility and efficiency of knockdown experiment and difference
-    between RNAi libraries in the knockdown efficiency and testing of phenotypic effects. We further analyzed
-    a large data from knockdowns of 11,354 genes (~75% of the Drosophila melanogaster total genes), including
-    702 new genes (~66% of the species total new genes that aged &lt; 40 Mya), revealing a similarly high
-    proportion (~32.2%) of essential genes that originated in various Sophophora subgenus lineages and distant
-    ancestors beyond the Drosophila genus. The transcriptional compensation effect from CRISPR knockout were
-    detected for highly similar duplicate copies. Knockout of a few young genes detected analogous essentiality
-    in various functions in development. Taken together, our experimental and computational analyses provide
-    valuable data for detection of phenotypic effects of genes in general and further strong evidence for the
-    concept that new genes in Drosophila quickly evolved essential functions in viability during development.
+    Are recently evolved genes dispensable? Knocking down 11,354 Drosophila genes — including
+    702 young genes (&lt; 40 My) — we find a similarly high proportion (~32%) of essential genes
+    among new and old genes alike. New genes in Drosophila rapidly evolve essential
+    developmental functions, challenging the view that development is governed only by ancient,
+    conserved genes.
 
 - title: "Topological evolution of coexpression networks by new gene integration maintains the hierarchical and modular structures in human ancestors"
   authors: "Jian Zu, Yuexi Gu, Yu Li, Chentong Li, Wenyu Zhang, Yong E. Zhang, UnJin Lee, Li Zhang, Manyuan Long"
@@ -275,22 +194,15 @@
   url: "https://doi.org/10.1007/s11427-019-9483-6"
   doi: "10.1007/s11427-019-9483-6"
   image: "assets/img/scls-topological.png"
+  alt: "Figure from the analysis of coexpression-network evolution driven by new-gene integration"
+  keywords: ["gene coexpression networks", "network evolution", "new gene integration", "systems biology"]
   type: journal
   abstract: >-
-    We analyze the global structure and evolution of human gene coexpression networks driven by new gene
-    integration. When the Pearson correlation coefficient is greater than or equal to 0.5, we find that the
-    coexpression network consists of 334 small components and one "giant" connected subnet comprising of 6317
-    interacting genes. This network shows the properties of power-law degree distribution and small-world. The
-    average clustering coefficient of younger genes is larger than that of the elderly genes (0.6685 vs. 0.5762).
-    Particularly, we find that the younger genes with a larger degree also show a property of hierarchical
-    architecture. The younger genes play an important role in the overall pivotability of the network and this
-    network contains few redundant duplicate genes. Moreover, we find that gene duplication and orphan genes are
-    two dominant evolutionary forces in shaping this network. Both the duplicate genes and orphan genes develop
-    new links through a "rich-gets-richer" mechanism. With the gradual integration of new genes into the ancestral
-    network, most of the topological structure features of the network would gradually increase. However, the
-    exponent of degree distribution and modularity coefficient of the whole network do not change significantly,
-    which implies that the evolution of coexpression networks maintains the hierarchical and modular structures in
-    human ancestors.
+    We analyze how integrating newly evolved genes reshapes human gene coexpression networks.
+    Younger genes are more clustered and increasingly hierarchical, gaining connections through
+    a "rich-gets-richer" process driven by duplication and orphan-gene origination. Despite
+    continual new-gene integration, the network preserves its hierarchical, modular structure
+    over evolutionary time.
 
 - title: "The cyanobacterial circadian clock follows midday in vivo and in vitro"
   authors: "Eugene Leypunskiy, Jenny Lin, Haneul Yoo, UnJin Lee, Aaron R. Dinner, Michael J. Rust"
@@ -300,17 +212,15 @@
   url: "https://doi.org/10.7554/eLife.23539"
   doi: "10.7554/eLife.23539"
   image: "assets/img/elife-cyano.png"
+  alt: "Figure from the study of the cyanobacterial circadian clock tracking midday across day lengths"
+  keywords: ["circadian clock", "cyanobacteria", "KaiABC oscillator", "entrainment"]
   type: journal
   abstract: >-
-    Circadian rhythms are biological oscillations that schedule daily changes in physiology. Outside the
-    laboratory, circadian clocks do not generally free-run but are driven by daily cues whose timing varies with
-    the seasons. The principles that determine how circadian clocks align to these external cycles are not well
-    understood. Here, we report experimental platforms for driving the cyanobacterial circadian clock both in vivo
-    and in vitro. We find that the phase of the circadian rhythm follows a simple scaling law in light-dark cycles,
-    tracking midday across conditions with variable day length. The core biochemical oscillator comprised of the
-    Kai proteins behaves similarly when driven by metabolic pulses in vitro, indicating that such dynamics are
-    intrinsic to these proteins. We develop a general mathematical framework based on instantaneous transformation
-    of the clock cycle by external cues, which successfully predicts clock behavior under many cycling environments.
+    How do circadian clocks lock onto daily cycles whose length changes with the seasons?
+    Driving the cyanobacterial clock in vivo and in vitro, we find its phase follows a simple
+    scaling law that tracks midday across day lengths — a behavior intrinsic to the core KaiABC
+    proteins. A general framework based on instantaneous cue-driven phase shifts predicts clock
+    behavior across many cycling environments.
 
 - title: "Geometric structure and geodesic in a solvable model of nonequilibrium process"
   authors: "Eun-jin Kim, UnJin Lee, James Heseltine, Rainer Hollerbach"
@@ -320,19 +230,15 @@
   url: "https://doi.org/10.1103/PhysRevE.93.062127"
   doi: "10.1103/PhysRevE.93.062127"
   image: "assets/img/pre-geodesic.png"
+  alt: "Figure from the solvable nonequilibrium model of geometric structure and geodesics"
+  keywords: ["nonequilibrium statistical mechanics", "information geometry", "stochastic processes"]
   type: journal
   abstract: >-
-    We investigate the geometric structure of a nonequilibrium process and its geodesic solutions. By employing an
-    exactly solvable model of a driven dissipative system (generalized nonautonomous Ornstein-Uhlenbeck process), we
-    compute the time-dependent probability density functions (PDFs) and investigate the evolution of this system in a
-    statistical metric space where the distance between two points (the so-called information length) quantifies the
-    change in information along a trajectory of the PDFs. In this metric space, we find a geodesic for which the
-    information propagates at constant speed, and demonstrate its utility as an optimal path to reduce the total time
-    and total dissipated energy. In particular, through examples of physical realizations of such geodesic solutions
-    satisfying boundary conditions, we present a resonance phenomenon in the geodesic solution and the discretization
-    into cyclic geodesic solutions. Implications for controlling population growth are further discussed in a stochastic
-    logistic model, where a periodic modulation of the diffusion coefficient and the deterministic force by a small
-    amount is shown to have a significant controlling effect.
+    Using an exactly solvable driven-dissipative model, we study nonequilibrium dynamics through
+    "information length" — a distance between evolving probability distributions. We find
+    geodesics along which information propagates at constant speed, giving optimal paths that
+    minimize time and dissipated energy, and show how small periodic modulations can control
+    outcomes in a stochastic population-growth model.
 
 - title: "Prognostic and predictive breast cancer signature"
   authors: "Marsha Rosner, Miao Sun, UnJin Lee"
@@ -341,12 +247,13 @@
   year: 2016
   url: "https://patents.google.com/patent/US20160078167A1/en"
   image: "assets/img/patent-breast.png"
+  alt: "Figure from the prognostic and predictive breast-cancer gene-signature patent"
+  keywords: ["breast cancer prognosis", "gene expression signature", "TET1"]
   type: patent
   abstract: >-
-    Embodiments of the invention are directed to methods of determining the prognosis of a breast cancer patient by
-    evaluating a specified set of genes. Specifically, methods may comprise calculating a prognosis score based on a
-    particular algorithm. Also disclosed are compositions, kits and methods for treating cancer in a subject in need
-    thereof are disclosed involving one or more upstream activators and/or downstream effectors of TET1.
+    Methods for determining breast-cancer prognosis from a defined set of genes, computing a
+    prognosis score via a specific algorithm. Also covers compositions and treatment approaches
+    targeting upstream activators and downstream effectors of TET1.
 
 - title: "Noise-Driven Phenotypic Heterogeneity with Finite Correlation Time in Clonal Populations"
   authors: "UnJin Lee†, John J. Skinner, John Reinitz, Marsha Rich Rosner, Eun-jin Kim†"
@@ -356,24 +263,15 @@
   url: "https://doi.org/10.1371/journal.pone.0132397"
   doi: "10.1371/journal.pone.0132397"
   image: "assets/img/plosone-noise.png"
+  alt: "Figure from the model of noise-driven phenotypic heterogeneity in clonal populations"
   keywords: ["phenotypic plasticity", "stochastic differential equations", "evolution of treatment resistance"]
   type: journal
   abstract: >-
-    There has been increasing awareness in the wider biological community of the role of clonal phenotypic
-    heterogeneity in playing key roles in phenomena such as cellular bet-hedging and decision making, as in the case of
-    the phage-λ lysis/lysogeny and B. Subtilis competence/vegetative pathways. Here, we report on the effect of
-    stochasticity in growth rate, cellular memory/intermittency, and its relation to phenotypic heterogeneity. We first
-    present a linear stochastic differential model with finite auto-correlation time, where a randomly fluctuating growth
-    rate with a negative average is shown to result in exponential growth for sufficiently large fluctuations in growth
-    rate. We then present a non-linear stochastic self-regulation model where the loss of coherent self-regulation and an
-    increase in noise can induce a shift from bounded to unbounded growth. An important consequence of these models is
-    that while the average change in phenotype may not differ for various parameter sets, the variance of the resulting
-    distributions may considerably change. This demonstrates the necessity of understanding the influence of variance and
-    heterogeneity within seemingly identical clonal populations, while providing a mechanism for varying functional
-    consequences of such heterogeneity. Our results highlight the importance of a paradigm shift from a deterministic to a
-    probabilistic view of clonality in understanding selection as an optimization problem on noise-driven processes,
-    resulting in a wide range of biological implications, from robustness to environmental stress to the development of
-    drug resistance.
+    Genetically identical clonal cells can still diverge phenotypically, with consequences from
+    bet-hedging to drug resistance. Using stochastic models with finite correlation time, we
+    show how noisy growth and loss of self-regulation can push populations from bounded to
+    unbounded growth, and how variance — not just the mean — shapes phenotype. The work argues
+    for a probabilistic view of clonality and of selection as optimization over noise.
 
 - title: "A Prognostic Gene Signature for Metastasis-Free Survival of Triple Negative Breast Cancer Patients"
   authors: "UnJin Lee*, Casey Frankenberger*, Jieun Yun, Elena Bevilacqua, Carlos Caldas, Suet-Feung Chin, Oscar M. Rueda, John Reinitz, Marsha Rich Rosner"
@@ -383,21 +281,12 @@
   url: "https://doi.org/10.1371/journal.pone.0082125"
   doi: "10.1371/journal.pone.0082125"
   image: "assets/img/plosone-tnbc.png"
+  alt: "Figure from the triple-negative breast cancer prognostic gene-signature study"
   keywords: ["machine learning", "triple-negative breast cancer", "patient prognosis", "survival analysis"]
   type: journal
   abstract: >-
-    Although triple negative breast cancers (TNBC) are the most aggressive subtype of breast cancer, they currently lack
-    targeted therapies. Because this classification still includes a heterogeneous collection of tumors, new tools to
-    classify TNBCs are urgently required in order to improve our prognostic capability for high risk patients and predict
-    response to therapy. We previously defined a gene expression signature, RKIP Pathway Metastasis Signature (RPMS), based
-    upon a metastasis-suppressive signaling pathway initiated by Raf Kinase Inhibitory Protein (RKIP). We have now generated
-    a new BACH1 Pathway Metastasis gene signature (BPMS) that utilizes targets of the metastasis regulator BACH1.
-    Specifically, we substituted experimentally validated target genes to generate a new BACH1 metagene, developed an
-    approach to optimize patient tumor stratification, and reduced the number of signature genes to 30. The BPMS
-    significantly and selectively stratified metastasis-free survival in basal-like and, in particular, TNBC patients. In
-    addition, the BPMS further stratified patients identified as having a good or poor prognosis by other signatures
-    including the Mammaprint and Oncotype clinical tests. The BPMS is thus complementary to existing signatures and is a
-    prognostic tool for high risk ER-HER2- patients. We also demonstrate the potential clinical applicability of the BPMS as
-    a single sample predictor. Together, these results reveal the potential of this pathway-based BPMS gene signature to
-    identify high risk TNBC patients that can respond effectively to targeted therapy, and highlight BPMS genes as novel drug
-    targets for therapeutic development.
+    Triple-negative breast cancers are aggressive, lack targeted therapies, and are hard to
+    stratify. We built a 30-gene BACH1 Pathway Metastasis Signature (BPMS) that selectively
+    predicts metastasis-free survival in basal-like/TNBC patients and refines risk beyond
+    existing clinical tests. It works as a single-sample predictor and nominates BACH1-pathway
+    genes as therapeutic targets.

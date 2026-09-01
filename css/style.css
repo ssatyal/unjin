@@ -154,6 +154,55 @@ a {
 #pubs {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/* ── Uniform, equal-height publication cards ───────────────────────────────── */
+#pubs .col {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#pubs .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;          /* clip the reveal panel until it slides up */
+}
+
+/* Uniform figure area: every figure sits, contained, in the same box on white */
+#pubs .card-image {
+    aspect-ratio: 4 / 3;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#pubs .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+#pubs .card-content {
+    flex: 1 0 auto;            /* content grows so cards in a row match height */
+}
+
+/* ── Reveal the abstract on hover / focus (tap still works via focus) ───────── */
+#pubs .card .card-reveal {
+    display: block;
+    transform: translateY(0);
+    transition: transform .35s ease;
+}
+
+#pubs .card:hover .card-reveal,
+#pubs .card:focus-within .card-reveal {
+    transform: translateY(-100%);
 }
 
 /* ── Publication card details (authors, citation, tags, abstract) ───────────── */
@@ -266,7 +315,60 @@ li:nth-child(even) {
 }
 
 #lab-name {
-    font-size: 28px;
+    font-size: 20px;
+}
+
+/* ── Slimmer header block (name + affiliation) ─────────────────────────────── */
+#name-container h1 {
+    font-size: 2.8rem;
+    margin: 10px 0 2px;
+}
+
+#job-title {
+    font-size: 1.3rem;
+    margin: 6px auto;
+}
+
+#current-school {
+    font-size: 1.3rem;
+    margin: 4px auto;
+}
+
+#phd-school {
+    font-size: 1.05rem;
+    margin: 4px auto;
+}
+
+#education h5.grey-text {
+    font-size: 0.9rem;
+    margin: 2px auto;
+}
+
+.research-blurb {
+    max-width: 680px;
+    margin: 16px auto 0;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #464646;
+}
+
+/* Spelled-out DOI on its own line under the venue button */
+.pub-doi {
+    display: inline-block;
+    margin: 10px 0 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.3px;
+    word-break: break-all;
+}
+
+/* Peer-review journals flow inline like the Languages list */
+#peer-review {
+    text-align: center;
+}
+
+#peer-review > li {
+    display: inline-block;
+    margin: 3px 10px;
 }
 
 @media only screen and (max-width: 667px) {

@@ -9,6 +9,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>UnJin Lee</title>
+    <meta name="description" content="UnJin Lee — evolutionary geneticist at the Rockefeller University studying how new genes are born. Publications, CV, and research." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -70,13 +72,19 @@
                 <h4 class="center" id="current-school">Rockefeller University</h4>
                 <h4 class="center grey-text" id="phd-school">PhD, MS University of Chicago, 2021</h4>
                 <h5 class="center grey-text">Committee on Genetics, Genomics, and Systems Biology</h5>
+                <p class="center research-blurb">
+                    I study how new genes are born. Working across population genetics, single-cell genomics,
+                    biophysics, and evolutionary theory, I ask how non-coding DNA evolves into functional
+                    <em>de novo</em> genes &mdash; and how genome organization, transcriptional noise, and molecular
+                    structure shape that process.
+                </p>
             </div>
         </div>
     </div>
 
     <div class="container">
         <h3 class="center rockablue-text">Publications</h3>
-        <p class="center pub-legend grey-text">&dagger; corresponding author&nbsp;&nbsp;&middot;&nbsp;&nbsp;&lowast; equal contribution&nbsp;&nbsp;&middot;&nbsp;&nbsp;click a card for the abstract</p>
+        <p class="center pub-legend grey-text">&dagger; corresponding author&nbsp;&nbsp;&middot;&nbsp;&nbsp;&lowast; equal contribution</p>
         <!--   Publication Section
                NOTE: The cards below are generated automatically from _data/publications.yml.
                To add or edit a paper, edit THAT file — you do not need to touch this loop. -->
@@ -86,7 +94,7 @@
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ pub.image | relative_url }}" alt="Figure from “{{ pub.title }}”" />
+                        <img class="activator" src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">more_vert</i></span>
@@ -96,7 +104,7 @@
                     </div>
                     <div class="card-action">
                         <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
-                        {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
+                        {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">close</i></span>
@@ -160,6 +168,7 @@
                     <h5 class="rockablue-text center">Experimental Techniques, Expertise</h5>
                     <ul>
                         <li class="center">Single Cell RNA Sequencing</li>
+                        <li class="center">Spatial-omics</li>
                         <li class="center">Stochastic Differential Equations</li>
                         <li class="center">Applied Numerical Optimization</li>
                         <li class="center">Monte Carlo Methods</li>
@@ -208,6 +217,21 @@
                         <li class="center">C++</li>
                         <li class="center">Java</li>
                         <li class="center">bash</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 extra">
+                    <h5 class="rockablue-text center">Peer Review</h5>
+                    <ul id="peer-review">
+                        <li class="center">PLoS Computational Biology</li>
+                        <li class="center">PNAS</li>
+                        <li class="center">Genome Biology and Evolution</li>
+                        <li class="center">Journal of Evolutionary Biology</li>
+                        <li class="center">Journal of Molecular Evolution</li>
+                        <li class="center">Genome</li>
+                        <li class="center">Cancer Cell International (Springer)</li>
+                        <li class="center">National Science Foundation (ad hoc reviewer)</li>
                     </ul>
                 </div>
             </div>
