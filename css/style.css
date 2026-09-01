@@ -469,6 +469,12 @@ li:nth-child(even) {
     font-size: 1rem;
     line-height: 1.55;
     color: #464646;
+    text-wrap: pretty;   /* avoid a single-word last line */
+}
+
+/* Avoid single-word "widow" lines in the Achievements/Presentations lists */
+#extra li {
+    text-wrap: pretty;
 }
 
 /* Spelled-out DOI on its own line under the venue button */
