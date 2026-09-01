@@ -210,7 +210,7 @@
   doi: "10.7554/eLife.23539"
   image: "assets/img/elife-cyano.png"
   alt: "Figure from the study of the cyanobacterial circadian clock tracking midday across day lengths"
-  keywords: ["circadian clock", "cyanobacteria", "KaiABC oscillator", "entrainment"]
+  keywords: ["circadian clock", "cyanobacteria", "entrainment"]
   type: journal
   abstract: >-
     How do circadian clocks lock onto daily cycles whose length changes with the seasons? Driving

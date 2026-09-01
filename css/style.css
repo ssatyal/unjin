@@ -389,11 +389,22 @@ a {
 }
 
 
-/* Uniform grey for the Achievements lists (was an alternating odd/even zebra that
-   read as unintentional). Footer .white-text lists are unaffected (Materialize
-   sets those with !important). */
-#extra li {
+li:nth-child(odd) {
     color: #464646;
+}
+
+li:nth-child(even) {
+    color: #7F7E7E;
+}
+
+/* Tighten the gap between the Service/Software subheadings (Professional, Outreach,
+   Scientific Software, Languages) and their lists. */
+#extra h6 {
+    margin-bottom: 2px;
+}
+
+#extra h6 + ul {
+    margin-top: 4px;
 }
 
 .justify {
