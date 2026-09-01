@@ -486,6 +486,14 @@ li:nth-child(even) {
     margin-bottom: 8px;
 }
 
+/* Grants: role/amount/year on its own line, but full-size (the funding amount is
+   not something to de-emphasize). */
+.grant-meta {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
 /* Spelled-out DOI on its own line under the venue button */
 .pub-doi {
     display: block;
