@@ -315,6 +315,31 @@ a {
     min-width: 0;
 }
 
+#pubs .cal-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Generic red PDF badge next to the venue button */
+#pubs .pdf-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    transition: transform .15s ease;
+}
+
+#pubs .pdf-link:hover {
+    transform: translateY(-1px);
+}
+
+#pubs .pdf-icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+
 /* Research-theme pill: fills the empty bottom-right, ~25% smaller than the venue
    button, vertically centered against the link block. */
 #pubs .project-pill {
