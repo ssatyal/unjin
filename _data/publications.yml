@@ -139,7 +139,7 @@
   url: "https://doi.org/10.1093/gbe/evae103"
   doi: "10.1093/gbe/evae103"
   image: "assets/img/gbe-cultivator.png"
-  alt: "Schematic of cis-regulatory element syntax — ancestral, tandem-upstream, tandem-downstream, convergent, divergent, and distal promoter configurations — underlying the cultivator model of de novo gene origination"
+  alt: "Schematic of the cultivator model of de novo gene origination: selection on a cultivator gene, novel regulatory elements and putative de novo transcription, and paths to de novo gene birth through cis- and trans-regulation by a de novo lncRNA"
   keywords: ["evolvability", "non-coding RNA", "de novo origination", "evolutionary theory"]
   type: journal
   abstract: >-

@@ -151,35 +151,35 @@ a {
     padding: 0 32px;
 }
 
+/* Cards have a FIXED width, so switching between one- and two-up only changes how
+   many fit per row — never the card size (this kills the "massive vs thin" jump).
+   The row is full-bleed (wider than the 70% text container) so two wide cards fit,
+   and left-packed so the trailing lone card sits on the left. */
 #pubs {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
-}
-
-/* Narrower two-up card row, centered on the page */
-#pubs {
-    max-width: 740px;
-    margin-left: auto;
+    gap: 28px;
+    width: 92vw;
+    max-width: 1128px;                 /* two 550px cards + gap: caps the row at two-up */
+    margin-left: calc(50% - 46vw);     /* center the wide row inside the narrow container */
     margin-right: auto;
 }
 
-/* Force the trailing lone card to the left regardless of row justification */
-#pubs .col:last-child {
-    margin-left: 0;
-    margin-right: auto;
+#pubs .col {
+    flex: 0 0 550px;
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 /* ── Flip publication cards ─────────────────────────────────────────────────
    Front = figure + title + authors + venue/DOI. Hovering (or focusing) the
    FIGURE flips the card on its vertical axis to reveal the abstract. Every card
    shares one fixed height, so the grid is perfectly uniform. */
-#pubs .col {
-    display: flex;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
 
 #pubs .pubcard {
     width: 100%;
