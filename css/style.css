@@ -158,12 +158,17 @@ a {
     justify-content: flex-start;
 }
 
-/* Let the two-up card row run ~15% wider than the text container on desktop */
-@media only screen and (min-width: 993px) {
-    #pubs {
-        width: 115%;
-        margin-left: -7.5%;
-    }
+/* Narrower two-up card row, centered on the page */
+#pubs {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Force the trailing lone card to the left regardless of row justification */
+#pubs .col:last-child {
+    margin-left: 0;
+    margin-right: auto;
 }
 
 /* ── Flip publication cards ─────────────────────────────────────────────────
@@ -236,7 +241,9 @@ a {
 
 /* The figure is the flip trigger */
 #pubs .pubcard-front .card-image {
-    flex: 0 0 225px;
+    flex: 1 1 auto;            /* grow to absorb spare height; tall figures fill more */
+    min-height: 200px;
+    padding: 6px 10px;         /* keep a small margin from the card edges */
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -259,7 +266,7 @@ a {
 }
 
 #pubs .pubcard-front .card-content {
-    flex: 1 1 auto;
+    flex: 0 0 auto;            /* natural height; the figure takes the leftover space */
     overflow: hidden;
     padding: 14px 20px 6px;
 }
