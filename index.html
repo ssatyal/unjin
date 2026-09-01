@@ -92,12 +92,12 @@
 
             {% for pub in site.data.publications %}
             <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
+                <div class="card hoverable" tabindex="0" aria-label="{{ pub.title | escape }} — hover or focus to read the abstract">
+                    <div class="card-image">
+                        <img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">more_vert</i></span>
+                        <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
                         <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
                         <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
                         {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
@@ -107,16 +107,10 @@
                         {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">close</i></span>
+                        <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
                         <p class="pub-authors-reveal">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
                         <p class="pub-citation-reveal grey-text">{{ pub.citation }}</p>
                         <p class="justify">{{ pub.abstract }}</p>
-                        {% if pub.highlights %}
-                        <p class="pub-highlights-title rockablue-text">Highlights</p>
-                        <ul class="pub-highlights browser-default">
-                            {% for h in pub.highlights %}<li>{{ h }}</li>{% endfor %}
-                        </ul>
-                        {% endif %}
                     </div>
                 </div>
             </div>

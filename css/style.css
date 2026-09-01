@@ -155,6 +155,17 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-content: flex-start;
+}
+
+/* Keyboard focus affordance for the now-focusable cards */
+#pubs .card:focus {
+    outline: 2px solid #005595;
+    outline-offset: 2px;
+}
+
+#pubs .card:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /* ── Uniform, equal-height publication cards ───────────────────────────────── */
@@ -240,13 +251,6 @@ a {
     background-color: #595959;
 }
 
-.pub-doi {
-    color: #005595 !important;
-    font-size: 0.78rem;
-    letter-spacing: 0.5px;
-    margin-left: 12px;
-}
-
 /* The reveal panel holds the full abstract; let long abstracts scroll rather
    than spill off the card. */
 .card-reveal {
@@ -270,23 +274,6 @@ a {
     margin: 0 0 12px;
 }
 
-.pub-highlights-title {
-    font-weight: 600;
-    margin: 14px 0 4px;
-}
-
-.pub-highlights {
-    margin: 0;
-    padding-left: 20px;
-    list-style: disc outside;
-}
-
-.pub-highlights > li {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 6px;
-    color: #464646;
-}
 
 li:nth-child(odd) {
     color: #464646;
@@ -359,6 +346,7 @@ li:nth-child(even) {
     font-size: 0.72rem;
     letter-spacing: 0.3px;
     word-break: break-all;
+    color: #005595 !important;
 }
 
 /* Peer-review journals flow inline like the Languages list */
@@ -369,6 +357,7 @@ li:nth-child(even) {
 #peer-review > li {
     display: inline-block;
     margin: 3px 10px;
+    color: #464646;
 }
 
 @media only screen and (max-width: 667px) {
