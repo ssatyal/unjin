@@ -1,4 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#005595"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#ffffff">UL</text>
+  <g fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- root -->
+    <path d="M11 32 H22"/>
+    <!-- primary split -->
+    <path d="M22 18 V46"/>
+    <path d="M22 18 H34"/>
+    <path d="M22 46 H30"/>
+    <!-- upper clade -->
+    <path d="M34 12 V24"/>
+    <path d="M34 12 H49"/>
+    <path d="M34 24 H49"/>
+    <!-- lower clade -->
+    <path d="M30 38 V54"/>
+    <path d="M30 38 H49"/>
+    <path d="M30 54 H49"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="50" cy="12" r="2.7"/>
+    <circle cx="50" cy="24" r="2.7"/>
+    <circle cx="50" cy="38" r="2.7"/>
+    <circle cx="50" cy="54" r="2.7"/>
+  </g>
 </svg>

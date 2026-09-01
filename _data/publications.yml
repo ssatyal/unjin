@@ -36,11 +36,11 @@
   keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
   abstract: >-
-    HP6/Umbrea is a fast-evolving Drosophila HP1 paralog that binds HP1a but cannot bind
-    chromatin on its own. Molecular dynamics simulations show that, inside HP1a condensates,
-    it lowers dense-phase density without shifting the phase-separation threshold — acting as
-    a "plasticizer" that may loosen heterochromatin and modulate silencing. Sequence analysis
-    points to a recently evolved, selectively constrained C-terminal tail underlying this role.
+    HP6/Umbrea is a fast-evolving Drosophila HP1 paralog that binds HP1a but cannot bind chromatin
+    on its own. MD simulations show that HP6/Umbrea lowers dense-phase density inside HP1a
+    condensates without shifting the phase-separation threshold, potentially operating as a
+    "plasticizer" that may loosen heterochromatin and modulate silencing. Sequence analysis points
+    to a recently evolved, constrained C-terminal tail underlying this role.
 
 - title: "Naturally arising de novo open reading frames as potential zinc chelators in Drosophila melanogaster"
   authors: "UnJin Lee†"
@@ -54,12 +54,11 @@
   keywords: ["transcriptional noise", "metalloproteins", "microsatellites", "de novo gene origination"]
   type: preprint
   abstract: >-
-    Can brand-new (de novo) genes gain function without evolving complex binding partners? We
-    show that thousands of segregating Drosophila de novo ORFs are enriched for bis-histidine
-    (H-x-H) zinc-coordinating motifs, generated when (CA) microsatellites are translated into
-    His-Thr-His repeats. Tracing one such ORF (ZMEG) from ancestral non-coding sequence, we
-    argue that repeat expansion supplies a distributed class of candidate metal-binding
-    peptides — highlighting emergence bias in molecular evolution.
+    Can brand-new (de novo) genes gain function without evolving complex binding partners? I show
+    that thousands of segregating Drosophila de novo ORFs are enriched for bis-histidine (H-x-H)
+    zinc-coordinating motifs, made when (CA) microsatellites translate into His-Thr-His repeats.
+    Tracing ZMEG, a candidate zinc-binding ORF, from ancestral non-coding sequence, I argue that
+    repeat expansion supplies a distributed class of candidate metal-binding peptides.
 
 - title: "Machine learning for evolutionary genetics and molecular evolution"
   authors: "Nicolas Svetec, UnJin Lee, Li Zhao"
@@ -75,8 +74,8 @@
   abstract: >-
     Machine learning, and deep learning in particular, is beginning to reshape evolutionary
     genetics and molecular evolution. This review surveys where ML now connects genotype,
-    phenotype, and evolutionary history — from working directly on raw genetic variation to
-    causal-inference and multiomic approaches — and the challenges that remain.
+    phenotype, and evolutionary history, from raw genetic variation to causal and multiomic
+    approaches, and the challenges that remain.
 
 - title: "Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity"
   authors: "Candace Thompson, Shawn Mozeika, Elizabeth Paredes, UnJin Lee†"
@@ -90,11 +89,11 @@
   keywords: ["soil amendment", "metagenomic sequencing", "microbial dynamics"]
   type: journal
   abstract: >-
-    Korean Natural Farming claims to cultivate and transfer beneficial "indigenous
-    microorganisms" to soils, but the practice lacks validation. Using 16S and ITS sequencing
-    across successive cultivation stages, we find the process is dominated by a few bacterial
-    and fungal taxa and consistently reduces fungal diversity — contrary to its claimed
-    benefit — though early cultures can capture and sustain bacterial diversity.
+    Korean Natural Farming claims to cultivate and transfer beneficial "indigenous microorganisms"
+    to soils, but the practice lacks validation. Using 16S and ITS sequencing across successive
+    cultivation stages, we find the process is dominated by a few bacterial and fungal taxa and
+    consistently reduces fungal diversity, contrary to its claimed benefit, though early cultures
+    can capture and sustain bacterial diversity.
 
 - title: "Comparative single-cell analysis of transcriptional bursting reveals the role of genome organization in de novo transcript origination"
   authors: "UnJin Lee, Cong Li, Christopher B. Langer, Nicolas Svetec, Li Zhao"
@@ -109,10 +108,10 @@
   type: journal
   abstract: >-
     Comparing single-cell transcriptomes across three Drosophila species, we identify a core
-    198-gene set that robustly labels spermatogenic cell types across 25–30 My of divergence.
-    Using it, we show how transcriptional bursting evolves through spermatogenesis — including
-    conserved reductions in X-linked bursting — and provide evidence for the cultivator model,
-    in which newly evolved testis transcripts locally tune neighboring genes' bursting.
+    198-gene set that robustly labels spermatogenic cell types across 25-30 My of divergence.
+    Using it, we show how transcriptional bursting evolves through spermatogenesis, including
+    conserved reductions in X-linked bursting, providing support for the cultivator model in which
+    newly evolved testis transcripts locally tune neighboring genes' bursting.
 
 - title: "The three-dimensional genome drives the evolution of asymmetric gene duplicates via enhancer capture-divergence"
   authors: "UnJin Lee†*, Deanna Arsala*, Shengqian Xia*, Cong Li, Mujahid Ali, Nicolas Svetec, Christopher B. Langer, Débora R. Sobreira, Ittai Eres, Dylan Sosa, Jianhai Chen, Li Zhang, Patrick Reilly, Alexander Guzzetta, J.J. Emerson, Peter Andolfatto, Qi Zhou, Li Zhao, Manyuan Long†"
@@ -126,11 +125,11 @@
   keywords: ["Hi-C", "RNAi", "genome organization", "gene regulation", "gene duplication", "evolutionary theory"]
   type: journal
   abstract: >-
-    Duplicate-gene models have largely ignored genome architecture. We show that distally
-    duplicated genes can be regulated by co-opting pre-existing long-range 3D contacts
-    ("enhancer capture"), using the young gene HP6/Umbrea as a case study: it landed near an
-    existing chromatin interaction and captured a hidden enhancer (FLEE1) inside the essential
-    gene MFS18. Enhancer capture offers a one-step, highly evolvable solution to Ohno's dilemma.
+    Duplicate-gene models have largely ignored genome architecture. We show distally duplicated
+    genes can be regulated by co-opting pre-existing 3D contacts ("enhancer capture"), using the
+    young gene HP6/Umbrea as a case study. It captured a hidden enhancer (FLEE1) inside the
+    essential gene MFS18, highlighting how enhancer capture is a one-step, evolvable solution to
+    Ohno's dilemma.
 
 - title: "A Synergistic, Cultivator Model of De Novo Gene Origination"
   authors: "UnJin Lee, Shawn M. Mozeika, Li Zhao"
@@ -163,10 +162,10 @@
   type: journal
   abstract: >-
     We introduce a stochastic framework combining genetic and epigenetic contributions to
-    phenotype to ask when plasticity evolves. Plasticity is favored transiently while adapting
-    to new environments and erodes (canalizes) in stable ones, with selection choosing the more
-    efficient route — genic or plastic — depending on relative mutation rates. The results
-    highlight genetic conflict as a force shaping the evolution of plasticity.
+    phenotype to ask when plasticity evolves. Plasticity is favored transiently while adapting to
+    new environments and erodes (canalizes) in stable ones, with selection choosing genic versus
+    plastic routes by relative mutation rates, highlighting genetic conflict as a determinant of
+    the long-term maintenance of phenotypic plasticity.
 
 - title: "Genomic analyses of new genes and their phenotypic effects reveal rapid evolution of essential functions in Drosophila development"
   authors: "Shengqian Xia, Nicholas W. VanKuren, Chunyan Chen, Li Zhang, Claus Kemkemer, Yi Shao, Hangxing Jia, UnJin Lee, Alexander S. Advani, Andrea Gschwend, Maria D. Vibranovski, Sidi Chen, Yong E. Zhang, Manyuan Long"
@@ -180,11 +179,9 @@
   keywords: ["new genes", "gene essentiality", "Drosophila development", "RNAi knockdown", "functional evolution"]
   type: journal
   abstract: >-
-    Are recently evolved genes dispensable? Knocking down 11,354 Drosophila genes — including
-    702 young genes (&lt; 40 My) — we find a similarly high proportion (~32%) of essential genes
-    among new and old genes alike. New genes in Drosophila rapidly evolve essential
-    developmental functions, challenging the view that development is governed only by ancient,
-    conserved genes.
+    Are recently evolved genes dispensable? Knocking down 11,354 Drosophila genes, including 702
+    young ones (&lt; 40 My), we find a similarly high proportion (~32%) essential among new and
+    old alike, highlighting how new genes rapidly evolve essential developmental functions.
 
 - title: "Topological evolution of coexpression networks by new gene integration maintains the hierarchical and modular structures in human ancestors"
   authors: "Jian Zu, Yuexi Gu, Yu Li, Chentong Li, Wenyu Zhang, Yong E. Zhang, UnJin Lee, Li Zhang, Manyuan Long"
@@ -216,11 +213,10 @@
   keywords: ["circadian clock", "cyanobacteria", "KaiABC oscillator", "entrainment"]
   type: journal
   abstract: >-
-    How do circadian clocks lock onto daily cycles whose length changes with the seasons?
-    Driving the cyanobacterial clock in vivo and in vitro, we find its phase follows a simple
-    scaling law that tracks midday across day lengths — a behavior intrinsic to the core KaiABC
-    proteins. A general framework based on instantaneous cue-driven phase shifts predicts clock
-    behavior across many cycling environments.
+    How do circadian clocks lock onto daily cycles whose length changes with the seasons? Driving
+    the cyanobacterial clock in vivo and in vitro, we find its phase follows a simple scaling law
+    that tracks midday, intrinsic to the minimal KaiABC protein system. This framework based on
+    cue-driven phase shifts can thus predict clock behavior across many environments.
 
 - title: "Geometric structure and geodesic in a solvable model of nonequilibrium process"
   authors: "Eun-jin Kim, UnJin Lee, James Heseltine, Rainer Hollerbach"
@@ -234,11 +230,10 @@
   keywords: ["nonequilibrium statistical mechanics", "information geometry", "stochastic processes"]
   type: journal
   abstract: >-
-    Using an exactly solvable driven-dissipative model, we study nonequilibrium dynamics through
-    "information length" — a distance between evolving probability distributions. We find
-    geodesics along which information propagates at constant speed, giving optimal paths that
-    minimize time and dissipated energy, and show how small periodic modulations can control
-    outcomes in a stochastic population-growth model.
+    Using an exactly solvable driven-dissipative model, we study nonequilibrium dynamics via
+    information length. We find geodesics along which information moves at constant speed, giving
+    optimal paths that minimize time and dissipated energy, and show small periodic modulations
+    can control a stochastic growth model.
 
 - title: "Prognostic and predictive breast cancer signature"
   authors: "Marsha Rosner, Miao Sun, UnJin Lee"
@@ -248,12 +243,12 @@
   url: "https://patents.google.com/patent/US20160078167A1/en"
   image: "assets/img/patent-breast.png"
   alt: "Figure from the prognostic and predictive breast-cancer gene-signature patent"
-  keywords: ["breast cancer prognosis", "gene expression signature", "TET1"]
+  keywords: ["breast cancer prognosis", "gene expression signature", "prognostic biomarkers"]
   type: patent
   abstract: >-
     Methods for determining breast-cancer prognosis from a defined set of genes, computing a
-    prognosis score via a specific algorithm. Also covers compositions and treatment approaches
-    targeting upstream activators and downstream effectors of TET1.
+    prognosis score via a specific algorithm. Also covers related compositions, kits, and
+    treatment approaches for the most aggressive breast cancers.
 
 - title: "Noise-Driven Phenotypic Heterogeneity with Finite Correlation Time in Clonal Populations"
   authors: "UnJin Lee†, John J. Skinner, John Reinitz, Marsha Rich Rosner, Eun-jin Kim†"
@@ -268,10 +263,9 @@
   type: journal
   abstract: >-
     Genetically identical clonal cells can still diverge phenotypically, with consequences from
-    bet-hedging to drug resistance. Using stochastic models with finite correlation time, we
-    show how noisy growth and loss of self-regulation can push populations from bounded to
-    unbounded growth, and how variance — not just the mean — shapes phenotype. The work argues
-    for a probabilistic view of clonality and of selection as optimization over noise.
+    bet-hedging to drug resistance. Using stochastic models with finite correlation time, we show
+    how noisy growth and loss of self-regulation shift populations from bounded to unbounded
+    growth, and how variance, not just the mean, shapes phenotype.
 
 - title: "A Prognostic Gene Signature for Metastasis-Free Survival of Triple Negative Breast Cancer Patients"
   authors: "UnJin Lee*, Casey Frankenberger*, Jieun Yun, Elena Bevilacqua, Carlos Caldas, Suet-Feung Chin, Oscar M. Rueda, John Reinitz, Marsha Rich Rosner"

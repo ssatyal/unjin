@@ -48,7 +48,7 @@
             </div>
             <div class="section" id="education">
                 <div id="name-container">
-                    <h1 class="header center rockablue-text">UnJin Lee</h1>
+                    <h1 class="header center rockablue-text"><a href="assets/cv.pdf" target="_blank" rel="noopener" class="name-link rockablue-text" title="View CV">UnJin Lee</a></h1>
                 </div>
                 <div class="social-row">
                     <a class="social-link" href="https://orcid.org/0000-0003-2424-650X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
@@ -73,10 +73,10 @@
                 <h4 class="center grey-text" id="phd-school">PhD, MS University of Chicago, 2021</h4>
                 <h5 class="center grey-text">Committee on Genetics, Genomics, and Systems Biology</h5>
                 <p class="center research-blurb">
-                    I study how new genes are born. Working across population genetics, single-cell genomics,
-                    biophysics, and evolutionary theory, I ask how non-coding DNA evolves into functional
-                    <em>de novo</em> genes &mdash; and how genome organization, transcriptional noise, and molecular
-                    structure shape that process.
+                    I study how new genes are born. Working across population genetics, single-cell and
+                    spatial-omics, biophysics, and evolutionary theory, I ask how &ldquo;junk&rdquo; DNA evolves into
+                    functional genes <em>de novo</em>, and how genome organization, transcriptional noise, and
+                    molecular structure shape that process.
                 </p>
             </div>
         </div>
@@ -92,25 +92,32 @@
 
             {% for pub in site.data.publications %}
             <div class="col s12 m6">
-                <div class="card hoverable" tabindex="0" aria-label="{{ pub.title | escape }} — hover or focus to read the abstract">
-                    <div class="card-image">
-                        <img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
-                        <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
-                        <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
-                        {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
-                    </div>
-                    <div class="card-action">
-                        <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
-                        {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
-                        <p class="pub-authors-reveal">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
-                        <p class="pub-citation-reveal grey-text">{{ pub.citation }}</p>
-                        <p class="justify">{{ pub.abstract }}</p>
+                <div class="pubcard">
+                    <div class="pubcard-inner">
+                        <div class="pubcard-face pubcard-front">
+                            <div class="card-image" tabindex="0" role="button" aria-label="Show abstract for {{ pub.title | escape }}">
+                                <img src="{{ pub.image | relative_url }}" alt="{{ pub.alt | default: pub.title | escape }}" />
+                                <span class="flip-hint" aria-hidden="true">abstract &#8635;</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
+                                <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
+                                <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
+                                {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
+                            </div>
+                            <div class="card-action">
+                                <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
+                                {% if pub.doi %}<a class="pub-doi" target="_blank" rel="noopener" href="https://doi.org/{{ pub.doi }}">DOI:&nbsp;{{ pub.doi }}</a>{% endif %}
+                            </div>
+                        </div>
+                        <div class="pubcard-face pubcard-back">
+                            <div class="card-content">
+                                <span class="card-title grey-text text-darken-4">{{ pub.title }}</span>
+                                <p class="pub-authors-reveal">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
+                                <p class="pub-citation-reveal grey-text">{{ pub.citation }}</p>
+                                <p class="justify">{{ pub.abstract }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
