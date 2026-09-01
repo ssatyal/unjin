@@ -47,13 +47,14 @@
     - "Integrating multiomics data through ML is revealing hidden layers of complexity, such as epistasis, regulatory evolution, and phenotypic plasticity, that shape adaptation and diversification."
 
 - title: "Korean Natural Farming practices are dominated by a limited number of microbes and decrease fungal diversity"
-  authors: "Candace Thompson, Shawn Mozeika, Elizabeth Paredes, UnJin Lee"
+  authors: "Candace Thompson, Shawn Mozeika, Elizabeth Paredes, UnJin Lee†"
   venue: "Sustainable Microbiology"
   citation: "Sustainable Microbiology 3(3):qvag033 (2026)"
   year: 2026
   url: "https://doi.org/10.1093/sumbio/qvag033"
   doi: "10.1093/sumbio/qvag033"
   image: "assets/img/knf.png"
+  keywords: ["soil amendment", "metagenomic sequencing", "microbial dynamics"]
   type: journal
   abstract: >-
     Korean Natural Farming (KNF) practices claim to cultivate and transfer 'indigenous
@@ -76,13 +77,14 @@
     studies of KNF efficacy and sustainability.
 
 - title: "HP6/Umbrea, a rapidly evolving Drosophila HP1-family paralog, is a candidate HP1a-recruited plasticizer of heterochromatin"
-  authors: "UnJin Lee, Li Zhao"
+  authors: "UnJin Lee†, Li Zhao†"
   venue: "bioRxiv"
   citation: "bioRxiv preprint (2026)"
   year: 2026
   url: "https://www.biorxiv.org/content/10.64898/2026.08.24.746899v1"
   doi: "10.64898/2026.08.24.746899"
   image: "assets/img/biorxiv-hp6.svg"
+  keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
   abstract: >-
     HP6/Umbrea, a rapidly evolving Drosophila HP1-family paralog, functions as an
@@ -97,13 +99,14 @@
     plasticizer function.
 
 - title: "Naturally arising de novo open reading frames as potential zinc chelators in Drosophila melanogaster"
-  authors: "UnJin Lee"
+  authors: "UnJin Lee†"
   venue: "bioRxiv"
   citation: "bioRxiv preprint (2026)"
   year: 2026
   url: "https://www.biorxiv.org/content/10.64898/2026.08.19.745823v1"
   doi: "10.64898/2026.08.19.745823"
   image: "assets/img/biorxiv-neorf.svg"
+  keywords: ["transcriptional noise", "metalloproteins", "microsatellites", "de novo gene origination"]
   type: preprint
   abstract: >-
     A central open problem in the study of de novo gene origination is that the molecular
@@ -136,6 +139,7 @@
   url: "https://doi.org/10.1073/pnas.2425618122"
   doi: "10.1073/pnas.2425618122"
   image: "assets/img/pnas-bursting.png"
+  keywords: ["single-cell transcriptomics", "genome organization", "statistical methods", "transcriptional bursting", "de novo origination"]
   type: journal
   abstract: >-
     Spermatogenesis is a key developmental process underlying the origination of newly evolved
@@ -160,13 +164,14 @@
     bursting properties during key stages of spermatogenesis.
 
 - title: "The three-dimensional genome drives the evolution of asymmetric gene duplicates via enhancer capture-divergence"
-  authors: "UnJin Lee, Deanna Arsala, Shengqian Xia, Cong Li, Mujahid Ali, Nicolas Svetec, Christopher B. Langer, Débora R. Sobreira, Ittai Eres, Dylan Sosa, Jianhai Chen, Li Zhang, Patrick Reilly, Alexander Guzzetta, J.J. Emerson, Peter Andolfatto, Qi Zhou, Li Zhao, Manyuan Long"
+  authors: "UnJin Lee†*, Deanna Arsala*, Shengqian Xia*, Cong Li, Mujahid Ali, Nicolas Svetec, Christopher B. Langer, Débora R. Sobreira, Ittai Eres, Dylan Sosa, Jianhai Chen, Li Zhang, Patrick Reilly, Alexander Guzzetta, J.J. Emerson, Peter Andolfatto, Qi Zhou, Li Zhao, Manyuan Long†"
   venue: "Science Advances"
   citation: "Science Advances 10(51):eadn6625 (2024)"
   year: 2024
   url: "https://doi.org/10.1126/sciadv.adn6625"
   doi: "10.1126/sciadv.adn6625"
   image: "assets/img/sciadv-3dgenome.png"
+  keywords: ["Hi-C", "RNAi", "genome organization", "gene regulation", "gene duplication", "evolutionary theory"]
   type: journal
   abstract: >-
     Previous evolutionary models of duplicate gene evolution have overlooked the pivotal role of
@@ -191,6 +196,7 @@
   url: "https://doi.org/10.1093/gbe/evae103"
   doi: "10.1093/gbe/evae103"
   image: "assets/img/gbe-cultivator.png"
+  keywords: ["evolvability", "non-coding RNA", "de novo origination", "evolutionary theory"]
   type: journal
   abstract: >-
     The origin and fixation of evolutionarily young genes is a fundamental question in evolutionary
@@ -205,13 +211,14 @@
     evolution of new genes.
 
 - title: "Evolution and maintenance of phenotypic plasticity"
-  authors: "UnJin Lee, Emily N. Mortola, Eun-jin Kim, Manyuan Long"
+  authors: "UnJin Lee†, Emily N. Mortola, Eun-jin Kim†, Manyuan Long"
   venue: "BioSystems"
   citation: "BioSystems 222:104791 (2022)"
   year: 2022
   url: "https://doi.org/10.1016/j.biosystems.2022.104791"
   doi: "10.1016/j.biosystems.2022.104791"
   image: "assets/img/biosystems-plasticity.jpg"
+  keywords: ["phenotypic plasticity", "stochastic differential equations", "evolutionary theory"]
   type: journal
   abstract: >-
     We introduce a novel framework for exploring the evolutionary consequences of phenotypic plasticity
@@ -342,13 +349,14 @@
     thereof are disclosed involving one or more upstream activators and/or downstream effectors of TET1.
 
 - title: "Noise-Driven Phenotypic Heterogeneity with Finite Correlation Time in Clonal Populations"
-  authors: "UnJin Lee, John J. Skinner, John Reinitz, Marsha Rich Rosner, Eun-Jin Kim"
+  authors: "UnJin Lee†, John J. Skinner, John Reinitz, Marsha Rich Rosner, Eun-Jin Kim†"
   venue: "PLOS ONE"
   citation: "PLOS ONE 10(7):e0132397 (2015)"
   year: 2015
   url: "https://doi.org/10.1371/journal.pone.0132397"
   doi: "10.1371/journal.pone.0132397"
   image: "assets/img/plosone-noise.png"
+  keywords: ["phenotypic plasticity", "stochastic differential equations", "evolution of treatment resistance"]
   type: journal
   abstract: >-
     There has been increasing awareness in the wider biological community of the role of clonal phenotypic
@@ -368,13 +376,14 @@
     drug resistance.
 
 - title: "A Prognostic Gene Signature for Metastasis-Free Survival of Triple Negative Breast Cancer Patients"
-  authors: "UnJin Lee, Casey Frankenberger, Jieun Yun, Elena Bevilacqua, Carlos Caldas, Suet-Feung Chin, Oscar M. Rueda, John Reinitz, Marsha Rich Rosner"
+  authors: "UnJin Lee*, Casey Frankenberger*, Jieun Yun, Elena Bevilacqua, Carlos Caldas, Suet-Feung Chin, Oscar M. Rueda, John Reinitz, Marsha Rich Rosner"
   venue: "PLOS ONE"
   citation: "PLOS ONE 8(12):e82125 (2013)"
   year: 2013
   url: "https://doi.org/10.1371/journal.pone.0082125"
   doi: "10.1371/journal.pone.0082125"
   image: "assets/img/plosone-tnbc.png"
+  keywords: ["machine learning", "triple-negative breast cancer", "patient prognosis", "survival analysis"]
   type: journal
   abstract: >-
     Although triple negative breast cancers (TNBC) are the most aggressive subtype of breast cancer, they currently lack

@@ -91,10 +91,60 @@ a {
     justify-content: center;
 }
 
-#orcid-logo {
-    height: 32px;
-    padding-left: 8px;
-    filter: drop-shadow(2px 3px 1px rgb(5, 5, 5));
+/* ── Social / identifier links row (ORCID, Scholar, GitHub, email) ─────────── */
+.social-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 4px 0 8px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    color: #005595;
+    transition: color .3s, transform .2s;
+}
+
+.social-link:hover {
+    color: #66A5AD;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    height: 26px;
+    width: 26px;
+    display: block;
+}
+
+/* ORCID keeps its own brand color; the others inherit rockablue via currentColor */
+.social-link[aria-label="ORCID"] .social-icon {
+    height: 28px;
+    width: 28px;
+}
+
+/* ── Publication legend + keyword pills ────────────────────────────────────── */
+.pub-legend {
+    font-size: 0.8rem;
+    margin: -6px 0 10px;
+}
+
+.pub-keywords {
+    margin-top: 8px;
+    line-height: 1.9;
+}
+
+.pub-kw {
+    display: inline-block;
+    font-size: 0.68rem;
+    color: #005595;
+    background-color: #eef3f7;
+    border: 1px solid #d5e2ec;
+    border-radius: 10px;
+    padding: 1px 8px;
+    margin: 0 4px 2px 0;
+    white-space: nowrap;
 }
 
 #job-title {

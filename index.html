@@ -47,8 +47,19 @@
             <div class="section" id="education">
                 <div id="name-container">
                     <h1 class="header center rockablue-text">UnJin Lee</h1>
-                    <a href="https://orcid.org/0000-0003-2424-650X" target="_blank">
-                        <img src="assets/orcid.logo.icon.svg" id="orcid-logo"></img>
+                </div>
+                <div class="social-row">
+                    <a class="social-link" href="https://orcid.org/0000-0003-2424-650X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+                        <img src="assets/orcid.logo.icon.svg" class="social-icon" alt="ORCID">
+                    </a>
+                    <a class="social-link scholar" href="https://scholar.google.com/citations?user=5UfRubAAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+                        <svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+                    </a>
+                    <a class="social-link github" href="https://github.com/ulee-sciscripts" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                        <svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                    </a>
+                    <a class="social-link email" href="mailto:linuxlife@gmail.com" aria-label="Email" title="Email">
+                        <svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.11L3.9 6h16.2L12 11.11zM3 7.32V18h18V7.32l-9 5.68-9-5.68z"/></svg>
                     </a>
                 </div>
 
@@ -57,7 +68,7 @@
                     <a id="lab-name" class="underline black-text" href="https://zhaolab.rockefeller.edu/index.php/people/" target="_blank">Laboratory of Evolutionary Genetics and Genomics</a>
                 </div>
                 <h4 class="center" id="current-school">Rockefeller University</h4>
-                <h4 class="center grey-text" id="phd-school">PhD, MA University of Chicago, 2021</h4>
+                <h4 class="center grey-text" id="phd-school">PhD, MS University of Chicago, 2021</h4>
                 <h5 class="center grey-text">Committee on Genetics, Genomics, and Systems Biology</h5>
             </div>
         </div>
@@ -65,6 +76,7 @@
 
     <div class="container">
         <h3 class="center rockablue-text">Publications</h3>
+        <p class="center pub-legend grey-text">&dagger; corresponding author&nbsp;&nbsp;&middot;&nbsp;&nbsp;&lowast; equal contribution&nbsp;&nbsp;&middot;&nbsp;&nbsp;click a card for the abstract</p>
         <!--   Publication Section
                NOTE: The cards below are generated automatically from _data/publications.yml.
                To add or edit a paper, edit THAT file — you do not need to touch this loop. -->
@@ -80,6 +92,7 @@
                         <span class="card-title activator grey-text text-darken-4">{{ pub.title }}<i class="material-icons right">more_vert</i></span>
                         <p class="pub-authors">{{ pub.authors | replace: "UnJin Lee", "<strong>UnJin Lee</strong>" }}</p>
                         <p class="pub-citation grey-text">{{ pub.citation }}{% if pub.type and pub.type != "journal" %} <span class="pub-type pub-type-{{ pub.type }}">{{ pub.type }}</span>{% endif %}</p>
+                        {% if pub.keywords %}<div class="pub-keywords">{% for k in pub.keywords %}<span class="pub-kw">{{ k }}</span>{% endfor %}</div>{% endif %}
                     </div>
                     <div class="card-action">
                         <a class="btn waves-effect waves-light dark-grey" target="_blank" rel="noopener" href="{{ pub.url }}">{{ pub.venue }}</a>
@@ -110,32 +123,37 @@
                 <div class="col s12 m6 extra">
                     <h5 class="rockablue-text center">Awards & Honors</h5>
                     <ul>
-                        <li class="center">NSF Postdoctoral Research Fellowship in Biology</li>
-                        <li class="center">SMBE Satellite Meeting on De Novo Gene Birth Best Presentation Award</li>
-                        <li class="center">SMBE Satellite Meeting on De Novo Gene Birth Travel Award</li>
-                        <li class="center">Ridgeway Endowment Support Award</li>
-                        <li class="center">Hinds Evolutionary Biology Graduate Student Research Award</li>
-                        <li class="center">NIH T32 Gene Regulation Training Grant Recipient</li>
-                        <li class="center">NSF GRFP Honorable Mention 2016</li>
-                        <li class="center">Odyssey Scholar</li>
-                        <li class="center">National Merit Scholar</li>
+                        <li class="center">Black Family Therapeutic Development Fund Proof-of-Concept Award, Co-PI ($75,000), 2026</li>
+                        <li class="center">NSF Postdoctoral Research Fellowship in Biology, PI ($240,000), 2024&ndash;2027</li>
+                        <li class="center">Best Presentation Award, SMBE Satellite Meeting on De Novo Genes, 2023</li>
+                        <li class="center">SMBE Satellite Meeting on De Novo Genes Travel Award, 2023</li>
+                        <li class="center">Ridgeway Endowment Support, 2017&ndash;2021</li>
+                        <li class="center">Hinds Evolutionary Biology Graduate Student Research Award, 2017</li>
+                        <li class="center">NSF Graduate Research Fellowship Program Honorable Mention, 2016</li>
+                        <li class="center">NIH T32 Gene Regulation Training Grant Recipient, 2015&ndash;2017</li>
+                        <li class="center">NSF Research Experiences for Undergraduates, Chicago Center for Systems Biology, 2011</li>
+                        <li class="center">Odyssey Scholarship Recipient, University of Chicago, 2008&ndash;2013</li>
                     </ul>
                 </div>
                 <div class="col m6 s12 extra">
-                    <h5 class="rockablue-text center">Academic Service Activities</h5>
+                    <h5 class="rockablue-text center">Service Activities</h5>
+                    <h6 class="rockablue-text center">Professional</h6>
                     <ul>
-                        <li class="center">Rockefeller University Sustainability Committee Representative</li>
-                        <li class="center">Rockefeller University PDA Board Member</li>
-                        <li class="center">Rockefeller Inclusive Science Initiative Executive Board Member/Mental Health and Accessibility Coordinator</li>
-                        <li class="center">RockEDU SSRP Mentor</li>
-                        <li class="center"><a class="rockablue-text underline" target="_blank" href="https://www.genspace.org/">Genspace</a> Bioinformatics Workshop Instructor</li>
-                        <li class="center">Genspace FIT Scholar Program Mentor </li>
-                        <li class="center">BSD Equipment Library Founder and Committee Member </li>
-                        <li class="center">BSD Travel Award Committee Chair</li>
-                        <li class="center">Co-Host Groks Science Show Podcast</li>
-                        <li class="center">Co-Host Groks Science Show Radio Hour WHPK 88.5FM</li>
-                        <li class="center">Genetics Science Connections at the Museum of Science and Industry</li>
-                        <li class="center">American Association for the Advancement of Science Member</li>
+                        <li class="center">Rockefeller University Sustainability Committee, Laboratory Representative, 2023&ndash;</li>
+                        <li class="center">Rockefeller University Postdoctoral Association Board Member, 2023&ndash;2024</li>
+                        <li class="center">Rockefeller Inclusive Science Initiative Executive Board Member (Mental Health &amp; Accessibility Coordinator, 2023&ndash;), 2022&ndash;</li>
+                        <li class="center">BSD Equipment Library Committee, Founder, 2017&ndash;2018</li>
+                        <li class="center">BSD Travel Award Committee (Member; Chair 2018&ndash;2019), 2017&ndash;2019</li>
+                        <li class="center">Dean's Council Representative, 2014&ndash;2019</li>
+                        <li class="center">Program Representative (GGSB), 2014&ndash;2016</li>
+                    </ul>
+                    <h6 class="rockablue-text center">Outreach</h6>
+                    <ul>
+                        <li class="center">RockEDU SSRP Mentor, Summer 2023</li>
+                        <li class="center"><a class="rockablue-text underline" target="_blank" href="https://www.genspace.org/">Genspace</a> FIT Scholar Program Mentor, Spring 2023</li>
+                        <li class="center">E.E. Just Portrait Commission, 2017&ndash;2019</li>
+                        <li class="center">Co-Host, Groks Science Radio Hour, WHPK 88.5FM, 2016&ndash;2018</li>
+                        <li class="center">Genetics Science Connections at the Museum of Science and Industry, 2015&ndash;2016</li>
                     </ul>
                 </div>
                 <div class="col m6 s12 extra">
@@ -157,15 +175,16 @@
                 <div class="col m6 s12 extra">
                     <h5 class="rockablue-text center">Presentations</h5>
                     <ul>
-                        <li class="center">2025 66th Annual Drosophila Research Conference (Invited Workshop Talk)</li>
-                        <li class="center">2024 New York Area Population Genetics Meeting (Selected Talk)</li>
-                        <li class="center">2023 SMBE Satellite Meeting on De Novo Genes (Poster)</li>
-                        <li class="center">2022 New York Area Population Genetics Meeting (Poster)</li>
-                        <li class="center">2019 Midwest Population Genetics Meeting (Selected Talk)</li>
-                        <li class="center">2019 Gordon Conference on Ecological and Evolutionary Genetics (Poster)</li>
-                        <li class="center">2013 Undergraduate Symposium of the American Association of Cancer Researchers (Poster)</li>
-                        <li class="center">2013 University of Chicago (Poster) Undergraduate Research Symposium</li>
-                        <li class="center">2016 Aspen Center for Physics Winter Conference on Evolution, Populations, and Physics (Poster)</li>
+                        <li class="center">Population, Evolutionary, and Quantitative Genetics Conference, Pacific Grove, CA (Poster), 2026</li>
+                        <li class="center">University of Oklahoma Health Sciences Center, Oklahoma City, OK (Invited Talk), 2025</li>
+                        <li class="center">66th Annual Drosophila Research Conference, San Diego, CA (Invited Workshop Talk), 2025</li>
+                        <li class="center">NY Area Population Genetics Meeting, New York, NY (Selected Talk), 2024</li>
+                        <li class="center">SMBE Satellite Meeting on De Novo Genes, College Station, TX (Poster, Best Presentation Award), 2023</li>
+                        <li class="center">NY Area Population Genetics Meeting, New York, NY (Poster), 2022</li>
+                        <li class="center">Midwest Population Genetics Meeting, Chicago, IL (Selected Talk), 2019</li>
+                        <li class="center">Gordon Conference on Ecological and Evolutionary Genomics, Manchester, NH (Poster), 2019</li>
+                        <li class="center">Aspen Center for Physics: Evolution, Populations, and Physics, Aspen, CO (Poster), 2016</li>
+                        <li class="center">American Association of Cancer Researchers Annual Conference, Washington, DC (Poster), 2013</li>
                     </ul>
                 </div>
             </div>
@@ -202,9 +221,9 @@
                     <div class="col s12">
                         <h5 class="white-text center">Bio</h5>
                         <p class="grey-text text-lighten-4 center">
-                            UnJin Lee is an evolutionary geneticist with a background in physics. His prior work has been primarily focused on the interface between cancer diagnostics and systems biology, focusing on statistical and numerical methods. As a graduate student in the
-                            Committee on Genetics, Genomics, and Systems Biology at the University of Chicago, studied the functional evolution of new, essential genes and the evolution of phenotypic plasticity. Currently he is at the Laboratory of Evolutionary
-                            Genetics and Genomics at the Rockefeller University, working on understanding the selective forces that drive non-coding regions of the genome to evolve into new de novo genes.
+                            UnJin Lee is an evolutionary geneticist with a background in physics. His earlier work centered on the interface between cancer diagnostics and systems biology, emphasizing statistical and numerical methods. As a graduate student in the
+                            Committee on Genetics, Genomics, and Systems Biology at the University of Chicago, he studied the functional evolution of new, essential genes and the evolution of phenotypic plasticity. He is currently an NSF Postdoctoral Fellow in the Laboratory of Evolutionary
+                            Genetics and Genomics at the Rockefeller University, where he studies the selective forces that drive non-coding regions of the genome to evolve into new de novo genes.
                         </p>
                     </div>
                 </div>
