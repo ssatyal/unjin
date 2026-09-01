@@ -46,7 +46,7 @@
 }
 
 .cover-img {
-    background-image: url("https://i.imgur.com/kWrzIcM.jpg");
+    background-image: url("../assets/img/cover.jpg");
     background-size: cover;
     overflow: visible;
 }
@@ -144,7 +144,7 @@ a {
     border-radius: 10px;
     padding: 1px 8px;
     margin: 0 4px 2px 0;
-    white-space: nowrap;
+    max-width: 100%;
 }
 
 #job-title {
@@ -181,14 +181,14 @@ a {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #fff;
-    background-color: #66A5AD;
+    background-color: #35707a;
     border-radius: 3px;
     padding: 1px 6px;
     vertical-align: middle;
 }
 
 .pub-type-patent {
-    background-color: #767676;
+    background-color: #595959;
 }
 
 .pub-doi {
