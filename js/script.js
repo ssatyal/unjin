@@ -6,11 +6,12 @@ $(document).ready(function(){
     var img  = hero && hero.querySelector('.cover-photo');
     if (!hero || !img) return;
     var maxUp = 0;                      // how far the image can travel (overflow)
-    var FACTOR = 0.5;                   // < 1 => banner moves slower than the page
+    var FACTOR = 0.42;                  // < 1 => banner moves slower than the page
+    var START  = 0.6;                   // start 0.6 down the image (~2/5 up from bottom)
     function update(){
-        // Start framed on the MIDDLE third, then pan DOWN toward the bottom third
+        // Start framed a bit below the middle, then pan DOWN toward the bottom third
         // as the page scrolls down.
-        var ty = -maxUp / 2 - window.scrollY * FACTOR;
+        var ty = -maxUp * START - window.scrollY * FACTOR;
         if (ty > 0) ty = 0;
         if (ty < -maxUp) ty = -maxUp;
         img.style.transform = 'translateY(' + ty + 'px)';
