@@ -1,5 +1,25 @@
+// Custom hero parallax: the campus photo is full-width and taller than the banner,
+// so it can pan vertically. It starts framed on the LOWER portion of the image and
+// pans upward (slower than the page) as you scroll.
 $(document).ready(function(){
-    $('.parallax').parallax();
+    var hero = document.querySelector('.cover-parallax');
+    var img  = hero && hero.querySelector('.cover-photo');
+    if (!hero || !img) return;
+    var maxUp = 0;                      // how far the image can travel (overflow)
+    var FACTOR = 0.35;                  // < 1 => banner moves slower than the page
+    function update(){
+        var ty = -maxUp + window.scrollY * FACTOR;   // start at the bottom (lower third)
+        if (ty > 0) ty = 0;
+        if (ty < -maxUp) ty = -maxUp;
+        img.style.transform = 'translateY(' + ty + 'px)';
+    }
+    function measure(){
+        maxUp = Math.max(0, img.offsetHeight - hero.offsetHeight);
+        update();
+    }
+    if (img.complete) measure(); else img.addEventListener('load', measure);
+    window.addEventListener('resize', measure);
+    window.addEventListener('scroll', update, { passive: true });
 });
 
 // Publication flip cards.

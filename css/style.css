@@ -45,13 +45,29 @@
     width: 300px;
 }
 
-/* Parallax hero: the campus banner pans slower than the page as you scroll
-   (Materialize .parallax, initialized in js/script.js). */
+/* Parallax hero: the campus photo is scaled to the FULL WIDTH of the banner and
+   pans slower than the page as you scroll (custom parallax in js/script.js).
+   It starts framed on the lower third of the image (river-campus promenade). */
 .cover-parallax {
+    position: relative;
     height: 440px;
+    overflow: hidden;
+    background-color: #0d2740;   /* fallback while the photo loads */
+}
+
+.cover-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;                 /* match the full width of the image */
+    height: auto;
+    will-change: transform;
+    z-index: 0;
 }
 
 .cover-parallax .mug {
+    position: relative;
+    z-index: 1;
     min-height: 0;
     height: 100%;
     display: flex;
