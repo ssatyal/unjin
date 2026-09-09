@@ -6,7 +6,7 @@ $(document).ready(function(){
     var img  = hero && hero.querySelector('.cover-photo');
     if (!hero || !img) return;
     var maxUp = 0;                      // how far the image can travel (overflow)
-    var FACTOR = 0.42;                  // < 1 => banner moves slower than the page
+    var FACTOR = 0.455;                 // < 1 => banner moves slower than the page
     var START  = 0.66;                  // start ~0.66 down the image (a bit below middle)
     function update(){
         // Start framed a bit below the middle, then pan DOWN toward the bottom third
