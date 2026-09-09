@@ -45,10 +45,23 @@
     width: 300px;
 }
 
-.cover-img {
-    background-image: url("../assets/img/cover.jpg");
-    background-size: cover;
-    overflow: visible;
+/* Parallax hero: the campus banner pans slower than the page as you scroll
+   (Materialize .parallax, initialized in js/script.js). */
+.cover-parallax {
+    height: 440px;
+}
+
+.cover-parallax .mug {
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.cover-parallax .responsive-img {
+    margin-top: 0;
 }
 
 
@@ -569,9 +582,8 @@ li:nth-child(even) {
 }
 
 @media only screen and (max-width: 667px) {
-    .cover-img {
+    .cover-parallax {
         height: 300px;
-        background-position: center;
     }
     .mug {
         text-align: center;
