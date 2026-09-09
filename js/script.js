@@ -7,7 +7,7 @@ $(document).ready(function(){
     if (!hero || !img) return;
     var maxUp = 0;                      // how far the image can travel (overflow)
     var FACTOR = 0.42;                  // < 1 => banner moves slower than the page
-    var START  = 0.6;                   // start 0.6 down the image (~2/5 up from bottom)
+    var START  = 0.66;                  // start ~0.66 down the image (a bit below middle)
     function update(){
         // Start framed a bit below the middle, then pan DOWN toward the bottom third
         // as the page scrolls down.
