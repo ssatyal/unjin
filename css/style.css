@@ -616,3 +616,8 @@ li:nth-child(even) {
         }
     }
 }
+/* Photo attribution line in the footer */
+.photo-credit {
+    font-size: 0.78rem;
+    opacity: 0.85;
+}
