@@ -35,7 +35,7 @@
   pdf: "assets/pdf/biorxiv-hp6.pdf"
   project: "chelation"
   alt: "HP6/Umbrea figure: Drosophila phylogeny of the HP1b/HP6 duplication, HP1a versus HP6 domain architecture with predicted structures, and a molecular-dynamics snapshot of HP6 chains dispersed through an HP1a condensate"
-  keywords: ["liquid-liquid phase condensates", "heterochromatin", "molecular dynamics"]
+  keywords: ["bio-molecular condensates", "heterochromatin", "molecular dynamics"]
   type: preprint
   abstract: >-
     HP6/Umbrea is a fast-evolving Drosophila HP1 paralog that binds HP1a but cannot bind chromatin
