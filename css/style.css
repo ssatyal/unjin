@@ -607,7 +607,6 @@ li:nth-child(even) {
     .responsive-img {
         max-height: 200px;
         width: auto;
-        margin-left: auto;
     }
 }
 
